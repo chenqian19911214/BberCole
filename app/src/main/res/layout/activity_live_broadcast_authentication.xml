@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.bber.company.android.view.activity.LiveBroadcastAuthenticationActivity">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:scaleType="fitXY"
+        android:src="@mipmap/broadentback" />
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_custom"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/authentication_button_id"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/top_margin40"
+        android:layout_marginLeft="@dimen/top_margin40"
+        android:layout_marginRight="@dimen/top_margin40"
+        android:background="@mipmap/authentication_button_backage" />
+
+
+</RelativeLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/aboutustextback"
+    android:minHeight="100dp"
+
+    android:orientation="vertical">
+
+    <com.bber.company.android.view.customcontrolview.MyImageView
+        android:id="@+id/liveboadcast_gridview_item_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/top_margin3"
+        android:layout_marginRight="@dimen/top_margin3"
+        android:scaleType="centerCrop" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!--名称 等级 城市-->
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/top_margin10"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/liveboadcast_gridview_item_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="小王"
+                android:textColor="#ff0066"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/liveboadcast_gridview_item_city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/liveboadcast_gridview_item_name"
+                android:layout_marginTop="@dimen/top_margin10"
+                android:text="上海"
+                android:textColor="#333333"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/liveboadcast_gridview_item_level"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toEndOf="@+id/liveboadcast_gridview_item_name"
+                android:layout_toRightOf="@+id/liveboadcast_gridview_item_name" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/liveboadcast_gridview_item_stuts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="@dimen/top_margin10"
+            android:src="@mipmap/livebroadcast_status_online" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,128 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_custom" />
+
+    <RelativeLayout
+        style="@style/item_style_setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/top_margin12"
+        android:background="@drawable/setting_item_bg">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/user_icon"
+                android:layout_width="49dp"
+                android:layout_height="49dp"
+                fresco:placeholderImage="@mipmap/user_icon"
+                fresco:roundAsCircle="true"
+                fresco:roundingBorderWidth="2dp" />
+
+            <TextView
+                android:id="@+id/user_name"
+                style="@style/main_text_14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/top_margin12"
+                android:gravity="center"
+                android:text="dfa" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_price"
+                style="@style/main_text_22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/top_margin30"
+                android:text="0" />
+
+            <TextView
+                style="@style/sub_text_14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/top_margin30"
+                android:text="@string/order_price" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_choose_online"
+        style="@style/btn_pink_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/top_margin6"
+        android:padding="@dimen/top_margin12"
+        android:visibility="gone">
+
+        <TextView
+            style="@style/text_setting15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/top_margin20"
+            android:layout_toRightOf="@+id/img_recharge"
+            android:text="@string/pay_online" />
+
+    </RelativeLayout>
+
+    <include layout="@layout/view_line" />
+
+    <RelativeLayout
+        android:id="@+id/rl_choose_outline"
+        style="@style/btn_pink_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/top_margin6"
+        android:padding="@dimen/top_margin12">
+
+        <TextView
+            style="@style/text_setting15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/top_margin20"
+            android:layout_toRightOf="@+id/img_withdraw"
+            android:text="@string/pay_outline" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_choose_cancle"
+        style="@style/item_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/top_margin6"
+        android:gravity="center"
+        android:padding="@dimen/top_margin12">
+
+        <TextView
+            style="@style/main_text_14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/top_margin20"
+            android:layout_toRightOf="@+id/img_bank_card"
+            android:text="@string/pay_cancle" />
+
+    </RelativeLayout>
+</LinearLayout>

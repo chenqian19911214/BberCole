@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.bber.company.android.view.activity.LiveBroadcastDetailsActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_custom"
+        android:visibility="gone" />
+
+    <!-- 主播上面的toobar-->
+    <RelativeLayout
+        android:id="@+id/toolbarid"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="?attr/colorPrimary"
+        android:gravity="center_vertical"
+        android:visibility="gone">
+
+        <FrameLayout
+            android:id="@+id/details_back_tobay_id"
+            android:layout_width="44dip"
+            android:layout_height="44dip">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/top_margin15"
+                android:src="@mipmap/details_back" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/title_name_id"
+            style="@style/title18"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_vertical"
+            android:text="Chenqianapi" />
+
+        <FrameLayout
+            android:id="@+id/details_edit_id"
+            android:layout_width="44dip"
+            android:layout_height="44dip"
+            android:layout_alignParentRight="true">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/top_margin15"
+                android:src="@mipmap/modify_data" />
+        </FrameLayout>
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/details_carousell_figure_framelayout_id"
+        android:layout_width="match_parent"
+        android:layout_below="@id/toolbarid"
+        android:layout_height="250dip">
+        <cn.bingoogolapple.bgabanner.BGABanner
+            android:id="@+id/details_carousell_figure_nearby_id"
+            android:layout_width="match_parent"
+            android:layout_height="250dip"
+
+            app:banner_pageChangeDuration="800"
+            app:banner_pointAutoPlayAble="true"
+            app:banner_pointContainerBackground="@android:color/transparent"
+            app:banner_pointDrawable="@drawable/carousel_figure_back"
+            app:banner_transitionEffect="alpha">
+
+            <!--主播状态-->
+            <ImageView
+                android:id="@+id/details_broadcast_styte"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginRight="15dp"
+                android:src="@mipmap/liveboadcastlevel_intermediate" />
+
+            <Switch
+                android:id="@+id/details_broadcast_styte_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textOff="忙碌"
+                android:textOn="空闲"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="@dimen/top_margin10"
+                android:layout_marginTop="@dimen/top_margin10"
+                android:visibility="gone"/>
+
+            <FrameLayout
+                android:id="@+id/details_back_image_id"
+                android:layout_width="50dip"
+                android:layout_height="50dip"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/top_margin15"
+                    android:src="@mipmap/details_back" />
+
+            </FrameLayout>
+        </cn.bingoogolapple.bgabanner.BGABanner>
+       <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+           android:background="#55666666"
+            android:src="@mipmap/backagetou"/>
+    </FrameLayout>
+
+    <!--上面返回按钮-->
+
+    <!--中间白色部分-->
+    <LinearLayout
+        android:id="@+id/boradcase_zhong"
+        android:layout_width="match_parent"
+        android:layout_height="100dip"
+        android:layout_below="@+id/details_carousell_figure_framelayout_id"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="150dip"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/details_boradcase_poastage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/top_margin10"
+                android:text="资费:10元/分钟"
+                android:textSize="@dimen/zhubotext" />
+
+            <TextView
+                android:id="@+id/details_broadcast_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/details_boradcase_poastage"
+                android:layout_marginBottom="@dimen/top_margin10"
+                android:layout_marginLeft="@dimen/top_margin10"
+                android:background="@mipmap/details_broadcast_name_backage"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/top_margin10"
+                android:text="王晓燕"
+                android:textColor="#FCFBFB" />
+
+
+            <TextView
+                android:id="@+id/details_broadcast_age"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/details_boradcase_poastage"
+                android:layout_margin="@dimen/top_margin10"
+                android:textColor="@color/liveboadcast_texton"
+                android:textSize="@dimen/zhubotext" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/top_margin10">
+
+            <TextView
+                android:id="@+id/details_broadcast_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="接通时间：100分钟"
+                android:textSize="@dimen/zhubotext" />
+
+            <TextView
+                android:id="@+id/details_broadcast_id_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/details_broadcast_time"
+                android:layout_marginTop="@dimen/top_margin10"
+                android:text="ID：1008611"
+                android:textColor="@color/liveboadcast_texton"
+                android:textSize="@dimen/zhubotext" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <!--中下-->
+
+    <LinearLayout
+        android:id="@+id/tup_id"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/boradcase_zhong"
+        android:background="@mipmap/details_background"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/top_margin10"
+            android:text="标签"
+            android:textColor="@color/liveboadcast_texton"
+            android:textSize="16sp" />
+
+        <GridView
+            android:id="@+id/exhibition_grviewview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/top_margin10"
+            android:horizontalSpacing="@dimen/top_margin10"
+            android:numColumns="4"
+            android:verticalSpacing="@dimen/top_margin10" />
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/details_fenxian" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/top_margin10"
+            android:text="简介"
+            android:textColor="@color/liveboadcast_texton"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/details_boradcase_poastagetext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/top_margin10"
+            android:textColor="@color/liveboadcast_texton"
+            android:textSize="@dimen/zhubotext" />
+
+    </LinearLayout>
+    <!--下面按钮部分-->
+    <LinearLayout
+        android:id="@+id/button_layout"
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/details_broadcast_id"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@mipmap/detalis_button_backage"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@mipmap/details_broadcast_on" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/top_margin15"
+                android:gravity="center"
+                android:text="撩一撩"
+                android:textColor="@color/liveboadcast_texton"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="2dip"
+            android:layout_height="match_parent"
+            android:background="@mipmap/details_background" />
+
+
+        <LinearLayout
+            android:id="@+id/details_smment_id"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@mipmap/detalis_button_backage"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/details_massem_on" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/top_margin15"
+                android:gravity="center"
+                android:text="发消息"
+                android:textColor="@color/liveboadcast_texton"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+</RelativeLayout>

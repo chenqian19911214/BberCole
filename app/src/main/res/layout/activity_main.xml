@@ -1,0 +1,170 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:psts="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_mainBack"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/model1"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <com.bber.company.android.widget.MyViewPager
+        android:id="@+id/id_viewpager"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tittle_tab"/>
+
+    <!--下载框-->
+    <LinearLayout
+        android:id="@+id/lin_download"
+        android:layout_width="370dp"
+        android:layout_height="100dp"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/btn_white_nor"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="正在更新中..."
+                android:textColor="#000000"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:textColor="#000000"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/tittle_tab"
+        android:layout_width="fill_parent"
+        android:layout_height="49dp"
+        android:layout_above="@+id/top_statusbar"
+        android:background="@color/main_theme"
+        android:orientation="horizontal">
+
+        <com.bber.company.android.widget.ChangeColorIconWithTextView
+            android:id="@+id/id_indicator_home"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:padding="10dp"
+            psts:tab_icon="@mipmap/icon_home_nor"
+            psts:tab_text="@string/tab_home"
+            psts:tab_text_size="10sp"
+            psts:target_icon="@mipmap/icon_home_pre" />
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1">
+
+            <com.bber.company.android.widget.ChangeColorIconWithTextView
+                android:id="@+id/id_indicator_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+                psts:tab_icon="@mipmap/icon_msg_nor"
+                psts:tab_text="@string/action_msg"
+                psts:tab_text_size="10sp"
+                psts:target_icon="@mipmap/icon_msg_pre" />
+
+            <TextView
+                android:id="@+id/red_pot"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:layout_gravity="center_horizontal|top"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/red_pot"
+                android:gravity="center"
+                android:text="32"
+                android:textColor="@color/white"
+                android:textSize="8sp"
+                android:visibility="gone" />
+        </FrameLayout>
+
+        <!--
+                <com.bber.company.android.widget.ChangeColorIconWithTextView
+                    android:id="@+id/id_indicator_business"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    psts:tab_icon="@mipmap/icon_business_nor"
+                    psts:target_icon="@mipmap/icon_business_pre"
+                    psts:tab_text="@string/business"
+                    psts:tab_text_size="10sp" />
+        -->
+        <com.bber.company.android.widget.ChangeColorIconWithTextView
+            android:id="@+id/id_indicator_discusspic"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:padding="10dp"
+            psts:tab_icon="@mipmap/icon_pic_nor"
+            psts:tab_text="@string/discusspic"
+            psts:tab_text_size="10sp"
+            psts:target_icon="@mipmap/icon_pic_pre" />
+
+        <com.bber.company.android.widget.ChangeColorIconWithTextView
+            android:id="@+id/id_indicator_me"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:padding="10dp"
+
+            psts:tab_icon="@mipmap/icon_video"
+            psts:tab_text="@string/video_text"
+            psts:tab_text_size="10sp"
+            psts:target_icon="@mipmap/icon_video_check" />
+
+        <com.bber.company.android.widget.ChangeColorIconWithTextView
+            android:id="@+id/id_game"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:padding="10dp"
+            psts:tab_icon="@drawable/icon_play"
+            psts:tab_text="娱乐"
+            psts:tab_text_size="10sp"
+            psts:target_icon="@drawable/icon_true_play" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/top_statusbar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/black"
+        android:clipToPadding="true"
+        android:fitsSystemWindows="true" />
+</RelativeLayout>

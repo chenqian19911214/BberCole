@@ -1,0 +1,194 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_custom_bank" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/top_margin6"
+        android:background="@drawable/setting_item_bg"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/main_text_14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/top_margin40"
+            android:text="@string/my_balance" />
+
+        <TextView
+            android:id="@+id/my_balance"
+            style="@style/main_text_24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/top_margin40"
+            android:text="0.00" />
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_recharge"
+        style="@style/item_style_setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/top_margin6">
+
+        <ImageView
+            android:id="@+id/img_recharge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/icon_buy" />
+
+        <TextView
+            style="@style/main_text_14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/top_margin20"
+            android:layout_toRightOf="@+id/img_recharge"
+            android:text="购买会员" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/arrow" />
+    </RelativeLayout>
+
+    <include layout="@layout/view_line" />
+
+    <RelativeLayout
+        android:id="@+id/walert_relatlayout"
+        style="@style/item_style_setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/walert_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/icon_newcharge" />
+
+        <TextView
+            style="@style/main_text_14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/top_margin20"
+            android:layout_toRightOf="@+id/walert_img"
+            android:text="钱包充值" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/arrow" />
+    </RelativeLayout>
+
+    <include layout="@layout/view_line" />
+
+    <RelativeLayout
+        android:id="@+id/rl_withdraw"
+        style="@style/item_style_setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img_withdraw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/icon_change" />
+
+        <TextView
+            style="@style/main_text_14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/top_margin20"
+            android:layout_toRightOf="@+id/img_withdraw"
+            android:text="@string/withdraw_cash" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/arrow" />
+    </RelativeLayout>
+
+    <include layout="@layout/view_line" />
+
+    <RelativeLayout
+        android:id="@+id/vash_relat"
+        style="@style/item_style_setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/cash_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/icon_cash" />
+
+        <TextView
+            style="@style/main_text_14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/top_margin20"
+            android:layout_toRightOf="@+id/cash_image"
+            android:text="现金券" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/arrow" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_bank_card"
+        style="@style/item_style_setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/top_margin6">
+
+        <ImageView
+            android:id="@+id/img_bank_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/problem" />
+
+        <TextView
+            style="@style/main_text_14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/top_margin20"
+            android:layout_toRightOf="@+id/img_bank_card"
+            android:text="常见问题" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/arrow" />
+    </RelativeLayout>
+
+</LinearLayout>

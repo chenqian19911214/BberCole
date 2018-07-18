@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_custom"/>
+
+    <ListView
+        android:id="@+id/select_img_listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:listSelector="@android:color/transparent"
+        android:fadingEdge="none"
+        android:scrollingCache="false"
+        android:scrollbars="none"
+        android:dividerHeight="0.3dp"
+        android:divider="@color/line_gray"
+        />
+
+</LinearLayout>

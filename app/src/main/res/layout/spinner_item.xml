@@ -1,0 +1,9 @@
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/main_text_14"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/setting_item_bg"
+    android:paddingBottom="@dimen/activity_horizontal_margin"
+    android:paddingLeft="@dimen/top_margin20"
+    android:paddingRight="@dimen/top_margin20"
+    android:paddingTop="@dimen/activity_horizontal_margin" />

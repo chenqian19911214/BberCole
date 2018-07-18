@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#242335"
+    tools:context="com.bber.company.android.view.activity.LiveBroadcastAgreementActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_custom" />
+
+    <Button
+        android:id="@+id/agreement_next_id"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/top_margin60"
+        android:layout_marginLeft="@dimen/top_margin40"
+        android:layout_marginRight="@dimen/top_margin40"
+        android:background="@mipmap/agreement_next" />
+
+    <CheckBox
+        android:id="@+id/agreement_checkbox_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/agreement_next_id"
+        android:layout_margin="@dimen/top_margin40"
+        android:background="@null"
+        android:button="@drawable/authentication_check_state"
+        android:checked="true"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/top_margin10"
+        android:text="我已阅读并同意以上条款"
+        android:textColor="#999999"
+        android:textSize="@dimen/top_margin10" />
+
+    <TextView
+        android:id="@+id/agreement_text_id"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/agreement_checkbox_id"
+        android:layout_below="@id/toolbar"
+        android:layout_marginLeft="@dimen/top_margin10"
+        android:layout_marginRight="@dimen/top_margin10"
+        android:layout_marginTop="@dimen/top_margin10"
+        android:background="#313040"
+        android:padding="@dimen/top_margin10"
+        android:scrollbars="vertical"
+        android:textColor="#999999"
+        android:textSize="@dimen/livebroadcasttextsize" />
+</RelativeLayout>

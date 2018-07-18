@@ -1,0 +1,29 @@
+apply plugin: 'com.android.library'
+apply plugin: 'maven'
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.0.1'
+    }
+}
+repositories {
+    mavenCentral()
+}
+android {
+    compileSdkVersion 26
+    buildToolsVersion '26.0.2'
+
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 21
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:recyclerview-v7:23.0.1'
+}

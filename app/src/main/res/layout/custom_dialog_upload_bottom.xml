@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/view_pop"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/item_bg"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/top_margin8"
+    android:paddingLeft="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_vertical_margin"
+    android:paddingTop="@dimen/activity_vertical_margin">
+
+
+    <TextView
+        android:id="@+id/dialog_photo_album"
+        style="@style/text_pink14"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/dialog_item"
+        android:gravity="center"
+        android:padding="@dimen/top_margin12"
+        android:text="@string/upload_item1" />
+
+    <include layout="@layout/view_line_bold" />
+
+    <!-- 拍照 -->
+
+    <TextView
+        android:id="@+id/dialog_photo_graph"
+        style="@style/text_pink14"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog_item"
+        android:clickable="true"
+        android:gravity="center"
+        android:padding="@dimen/top_margin12"
+        android:text="@string/upload_item2" />
+
+    <include layout="@layout/view_line_bold" />
+    <!-- 取消 -->
+
+    <TextView
+        android:id="@+id/dialog_cancle"
+        style="@style/text_gray14"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/top_margin8"
+        android:background="@drawable/dialog_item"
+        android:clickable="true"
+        android:gravity="center"
+        android:padding="@dimen/top_margin12"
+        android:text="@string/cancle_tip" />
+
+</LinearLayout>

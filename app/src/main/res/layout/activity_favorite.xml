@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page_bg">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_custom_home"></include>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_list_type"
+        android:layout_marginTop="@dimen/top_margin6"
+        android:scrollbars="vertical" />
+
+    <LinearLayout
+        android:id="@+id/view_no_favorite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/null_msg" />
+
+        <TextView
+            style="@style/text_gray15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/top_margin20"
+            android:text="@string/no_favorite_model" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_list_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/toolbar"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/top_margin12"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_model"
+            style="@style/main_text_12"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="美模\n" />
+
+        <include layout="@layout/view_vertical_line"></include>
+
+        <TextView
+            android:id="@+id/tv_shop"
+            style="@style/main_text_12"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="商户\n" />
+    </LinearLayout>
+</RelativeLayout>

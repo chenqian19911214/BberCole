@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_custom" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/about_us_icon_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="100dp"
+            android:src="@mipmap/about_us_logo" />
+
+
+        <TextView
+            android:id="@+id/wanqianmei_text_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/about_us_icon_id"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/about_us_text_top"
+            android:text="@string/abot_us_maintext"
+            android:textColor="@color/abot_us_maintext_color"
+            android:textSize="60px" />
+
+
+        <FrameLayout
+            android:id="@+id/textqianidfratem"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/wanqianmei_text_id"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="@dimen/about_us_icon_top"
+            android:layout_marginTop="@dimen/about_us_text_top"
+
+            android:background="@drawable/aboutustextback">
+
+            <TextView
+                android:id="@+id/textqianid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                android:textColor="@color/Black"
+                android:textSize="40px" />
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/textqianidfratem"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="@dimen/about_us_icon_top"
+            android:layout_marginTop="@dimen/about_us_text_top"
+            android:background="@drawable/aboutustextback">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                android:text="官网：www.xxoopapa.net"
+                android:textColor="@color/Black"
+                android:textSize="40px" />
+        </FrameLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

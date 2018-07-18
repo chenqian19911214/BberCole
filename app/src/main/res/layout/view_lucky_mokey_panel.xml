@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/overlay"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/icon_model_choose"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="360dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="120dp"
+                    android:layout_weight="1">
+
+
+                    <com.bber.company.android.widget.PanelItemView
+                        android:id="@+id/item1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="120dp" />
+                </RelativeLayout>
+
+
+                <com.bber.company.android.widget.PanelItemView
+                    android:id="@+id/item2"
+                    android:layout_width="0dp"
+                    android:layout_height="120dp"
+                    android:layout_weight="1" />
+
+
+                <com.bber.company.android.widget.PanelItemView
+                    android:id="@+id/item3"
+                    android:layout_width="0dp"
+                    android:layout_height="120dp"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.bber.company.android.widget.PanelItemView
+                    android:id="@+id/item8"
+                    android:layout_width="0dp"
+                    android:layout_height="120dp"
+                    android:layout_weight="1" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent" />
+
+
+                <View
+                    android:id="@+id/view2"
+                    android:layout_width="0dp"
+                    android:layout_height="110dp"
+                    android:layout_weight="1" />
+
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent" />
+
+                <com.bber.company.android.widget.PanelItemView
+                    android:id="@+id/item4"
+                    android:layout_width="0dp"
+                    android:layout_height="120dp"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.bber.company.android.widget.PanelItemView
+                    android:id="@+id/item7"
+                    android:layout_width="0dp"
+                    android:layout_height="120dp"
+                    android:layout_weight="1" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent" />
+
+
+                <com.bber.company.android.widget.PanelItemView
+                    android:id="@+id/item6"
+                    android:layout_width="0dp"
+                    android:layout_height="120dp"
+                    android:layout_weight="1" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent" />
+
+
+                <com.bber.company.android.widget.PanelItemView
+                    android:id="@+id/item5"
+                    android:layout_width="0dp"
+                    android:layout_height="120dp"
+                    android:layout_weight="1" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

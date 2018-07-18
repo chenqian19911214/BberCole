@@ -1,0 +1,189 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_custom" />
+
+    <RelativeLayout
+        style="@style/item_style_setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/top_margin12">
+
+        <ImageView
+            android:id="@+id/user_icon"
+            android:layout_width="35dp"
+            android:layout_height="35dp" />
+
+        <TextView
+            android:id="@+id/tv_vipName"
+            style="@style/main_text_14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/top_margin12"
+            android:layout_toRightOf="@+id/user_icon"
+            android:text="@string/vip_tip" />
+
+        <TextView
+            android:id="@+id/tv_vip_price"
+            style="@style/main_text_14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/top_margin12"
+            android:background="@drawable/btn_corner"
+            android:text="¥0.0" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_bankcard"
+        style="@style/item_style_setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/top_margin12">
+
+        <ImageView
+            android:id="@+id/img_payWay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/icon_pay" />
+
+        <TextView
+            style="@style/main_text_14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/top_margin12"
+            android:layout_toRightOf="@+id/img_payWay"
+            android:text="@string/vip_pay_wallet" />
+
+        <TextView
+            style="@style/main_text_14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/top_margin12"
+            android:layout_toLeftOf="@+id/tv_balance"
+            android:text="@string/balance" />
+
+        <TextView
+            android:id="@+id/tv_balance"
+            style="@style/text_pink15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="@dimen/top_margin12"
+            android:text="¥0.0" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        style="@style/item_style_setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/top_margin12"
+        android:clickable="false"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/main_text_14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/img_alipay"
+            android:text="@string/money_text" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/top_margin12"
+            android:layout_marginTop="@dimen/top_margin12"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/main_text_30"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="¥" />
+
+            <TextView
+                android:id="@+id/tv_money"
+                style="@style/main_text_30"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/top_margin8"
+                android:text="¥" />
+
+        </LinearLayout>
+
+        <include layout="@layout/view_line" />
+
+        <TextView
+            android:id="@+id/tv_payTip"
+            style="@style/text_pink12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/top_margin12"
+            android:text="@string/buy_vip_tip" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/qrcodeShouKuan"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="1dp"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/text_pink12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="若无法充值成功，请联系客服提供二维码存款" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/computerRecharge"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="20dp"
+            android:background="@mipmap/computer" />
+
+        <TextView
+            style="@style/main_text_14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:text="电脑端请访问xxoopapa.net进行充值" />
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_payNext"
+        style="@style/btn_pink"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/top_margin40"
+        android:text="@string/sure_tip" />
+
+</LinearLayout>

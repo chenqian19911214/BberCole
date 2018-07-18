@@ -1,0 +1,104 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    style="@style/item_style_service"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/item_bg"
+    android:clickable="true"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/top_margin20"
+    android:paddingRight="@dimen/top_margin20">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/tv_item_covers"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentLeft="true"
+            fresco:placeholderImage="@mipmap/default_icon" />
+
+        <ImageView
+            android:id="@+id/iv_new_shop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/new_shop"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/top_margin12"
+        android:layout_marginTop="@dimen/top_margin6"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_shop_name"
+                style="@style/main_text_14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/top_margin6"
+            android:orientation="horizontal">
+
+            <RatingBar
+                android:id="@+id/rb_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="26dp"
+                android:isIndicator="true"
+                android:numStars="5"
+                android:progressDrawable="@drawable/rating_gary"
+                android:rating="0" />
+
+            <TextView
+                android:id="@+id/tv_shop_money"
+                style="@style/text_pink15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/top_margin6"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_district"
+                style="@style/second_text_12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical" />
+
+            <TextView
+                android:id="@+id/tv_distance"
+                style="@style/second_text_12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/top_margin6"
+                android:layout_toRightOf="@+id/tv_district" />
+
+            <TextView
+                android:id="@+id/tv_style"
+                style="@style/text_pink15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

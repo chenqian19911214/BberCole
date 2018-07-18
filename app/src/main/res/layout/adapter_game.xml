@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="java.lang.Double" />
+
+        <import type="java.lang.Float" />
+
+        <import type="java.util.List" />
+
+        <import type="com.bber.company.android.tools.Tools" />
+
+        <import type="com.bber.company.android.util.StringUtils" />
+
+        <variable
+            name="item"
+            type="com.bber.company.android.bean.GameMessageEnterBean" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="120dp">
+
+            <RelativeLayout
+                android:id="@+id/adapter_dynamic_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:background="@drawable/icon_table_d">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="22dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingRight="50dp">
+                    <!--<ImageView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:visibility="@{Double.parseDouble(item.gameBetLimit) == 5?View.GONE:(Double.parseDouble(item.gameBetLimit) == 6?View.GONE:(Double.parseDouble(item.gameBetLimit) == 7?View.GONE:(Double.parseDouble(item.gameBetLimit) == 8?View.GONE:(Double.parseDouble(item.gameBetLimit) == 9?View.GONE:View.VISIBLE))))}"-->
+                    <!--android:background="@{Double.parseDouble(item.gameBetLimit) == 10?@drawable/icon_one:(Double.parseDouble(item.gameBetLimit) == 20?@drawable/icon_two:(Double.parseDouble(item.gameBetLimit) == 30?@drawable/icon_three:(Double.parseDouble(item.gameBetLimit) == 40?@drawable/icon_four:(Double.parseDouble(item.gameBetLimit) == 50?@drawable/icon_five:(Double.parseDouble(item.gameBetLimit) == 60?@drawable/icon_six:(Double.parseDouble(item.gameBetLimit) == 70?@drawable/icon_seven:(Double.parseDouble(item.gameBetLimit) == 80?@drawable/icon_eight:(Double.parseDouble(item.gameBetLimit) == 90?@drawable/icon_nine:@drawable/icon_one)))))))) }" />-->
+                    <!--<ImageView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:background="@{Double.parseDouble(item.gameBetLimit) &lt; 100?@drawable/icon_double_zero:(Double.parseDouble(item.gameBetLimit) == 1?@drawable/icon_one:(Double.parseDouble(item.gameBetLimit) == 2?@drawable/icon_two:(Double.parseDouble(item.gameBetLimit) == 3?@drawable/icon_three:(Double.parseDouble(item.gameBetLimit) == 4?@drawable/icon_four:(Double.parseDouble(item.gameBetLimit) == 5?@drawable/icon_five:(Double.parseDouble(item.gameBetLimit) == 6?@drawable/icon_six:(Double.parseDouble(item.gameBetLimit) == 7?@drawable/icon_seven:(Double.parseDouble(item.gameBetLimit) == 8?@drawable/icon_eight:(Double.parseDouble(item.gameBetLimit) == 9?@drawable/icon_nine:@drawable/icon_zero)))))))))}"-->
+                    <!--/>-->
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@{item.getBetLimitB()==1?@drawable/icon_one:(item.getBetLimitB()==2?@drawable/icon_two:(item.getBetLimitB()== 3?@drawable/icon_three:(item.getBetLimitB() == 4?@drawable/icon_four:(item.getBetLimitB() == 5?@drawable/icon_five:(item.getBetLimitB() == 6?@drawable/icon_six:(item.getBetLimitB() == 7?@drawable/icon_seven:(item.getBetLimitB() == 8?@drawable/icon_eight:(item.getBetLimitB() == 9?@drawable/icon_nine:@drawable/icon_one))))))))}"
+                        android:visibility='@{item.getBetLimitB()==99?View.GONE:View.VISIBLE}' />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@{item.getBetLimitS()==1?@drawable/icon_one:(item.getBetLimitS()==2?@drawable/icon_two:(item.getBetLimitS()== 3?@drawable/icon_three:(item.getBetLimitS() == 4?@drawable/icon_four:(item.getBetLimitS() == 5?@drawable/icon_five:(item.getBetLimitS() == 6?@drawable/icon_six:(item.getBetLimitS() == 7?@drawable/icon_seven:(item.getBetLimitS() == 8?@drawable/icon_eight:(item.getBetLimitS() == 9?@drawable/icon_nine:@drawable/icon_zero))))))))}"
+                        android:visibility="@{item.getBetLimitS()==99?View.GONE:View.VISIBLE}" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@{item.getBetLimitG()==1?@drawable/icon_one:(item.getBetLimitG()==2?@drawable/icon_two:(item.getBetLimitG()== 3?@drawable/icon_three:(item.getBetLimitG() == 4?@drawable/icon_four:(item.getBetLimitG() == 5?@drawable/icon_five:(item.getBetLimitG() == 6?@drawable/icon_six:(item.getBetLimitG() == 7?@drawable/icon_seven:(item.getBetLimitG() == 8?@drawable/icon_eight:(item.getBetLimitG() == 9?@drawable/icon_nine:@drawable/icon_zero))))))))}" />
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/money_pool"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="110dp"
+                    android:layout_marginTop="45dp"
+                    android:background="@drawable/icon_moneypool"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="10dp"
+                    android:textColor="@color/text_glod"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:num="@{Float.parseFloat(StringUtils.doubleChangeIne(item.getJackpotBalance()))}" />
+
+                <TextView
+                    android:id="@+id/people"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="45dp"
+                    android:layout_toRightOf="@+id/money_pool"
+                    android:background="@drawable/icon_people"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="10dp"
+                    android:text='@{item.getWatching()+""}'
+                    android:textColor="@color/text_glod"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="35dp"
+                    android:layout_toRightOf="@+id/people"
+                    android:background="@drawable/icon_game_begin" />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/adapter_dynamic_image"
+                android:layout_marginBottom="8dp"
+                android:background="@{item.getBetModel() == 1 ? @drawable/game_model_ting:(item.getBetModel() == 2 ?@drawable/game_model_ting2 :@drawable/game_model_ting3)}" />
+        </RelativeLayout>
+    </LinearLayout>
+</layout>

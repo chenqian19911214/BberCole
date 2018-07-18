@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+    <LinearLayout
+        style="@style/item_style"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="@dimen/top_margin12"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+
+            style="@style/main_text_14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/input_mobile"></TextView>
+
+        <TextView
+            android:id="@+id/mobile_text"
+            style="@style/main_text_14"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:background="@drawable/edittext_stroke"
+            android:drawablePadding="5dp"
+            android:drawableRight="@drawable/icon_ecpand"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:text="中国 0086" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        style="@style/item_style"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/mobile_number"
+            style="@style/main_text_14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_stroke"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:text="0086" />
+        <!--<ImageView-->
+        <!--android:id="@+id/image_tri"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="3dp"-->
+        <!--android:background="@drawable/icon_ecpand"/>-->
+        <EditText
+            android:id="@+id/edit_mobile"
+            style="@style/normal_edit"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/edittext_stroke"
+            android:digits="@string/mobile_style"
+            android:hint="@string/mobile_num"
+            android:inputType="phone"
+            android:padding="10dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/item_style"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_myverify"
+            style="@style/main_text_14"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="@string/input_verify"></TextView>
+
+
+        <EditText
+            android:id="@+id/edit_VerifyCode"
+            style="@style/normal_edit"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:background="@drawable/edittext_stroke"
+            android:gravity="center_vertical"
+            android:hint="@string/verify_cdoe"
+            android:inputType="text"
+            android:maxLength="4"
+            android:padding="10dp" />
+
+        <Button
+            android:id="@+id/getverifycode_btn"
+            style="@style/text_pink12"
+            android:layout_width="90dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/btn_pink"
+            android:gravity="center"
+            android:text="@string/get_verify_code"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btn_sure"
+        style="@style/btn_pink"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginTop="@dimen/top_margin32"
+        android:enabled="false"
+        android:text="@string/sure_tip" />
+</LinearLayout>

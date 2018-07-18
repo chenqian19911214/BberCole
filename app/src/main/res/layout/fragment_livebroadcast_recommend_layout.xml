@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <cn.bingoogolapple.bgabanner.BGABanner
+        android:id="@+id/nearby_carousell_figure_recommend_id"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        app:banner_pageChangeDuration="800"
+        app:banner_pointAutoPlayAble="true"
+        app:banner_pointContainerBackground="@android:color/transparent"
+        app:banner_pointDrawable="@drawable/carousel_figure_back"
+        app:banner_transitionEffect="alpha" />
+
+    <com.bber.company.android.view.customcontrolview.PullToRefreshLayout
+        android:id="@+id/refresh_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <include layout="@layout/refresh_head" />
+        <!-- 支持所有实现Pullable接口的View -->
+
+        <com.bber.company.android.view.customcontrolview.PullableGridView
+            android:id="@+id/nearby_gridview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:columnWidth="90dp"
+            android:gravity="center"
+            android:horizontalSpacing="10dp"
+            android:numColumns="auto_fit"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="15dp" />
+
+        <include layout="@layout/load_more" />
+    </com.bber.company.android.view.customcontrolview.PullToRefreshLayout>
+</LinearLayout>

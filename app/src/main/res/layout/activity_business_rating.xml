@@ -1,0 +1,216 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page_bg"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_custom" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                style="@style/item_style_setting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/top_margin6"
+                android:clickable="false"
+                android:focusable="true"
+                android:focusableInTouchMode="true">
+
+                <TextView
+                    android:id="@+id/unuse_e"
+                    style="@style/second_text_14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/top_margin6"
+                    android:gravity="center_vertical"
+                    android:text="@string/environment" />
+
+                <RatingBar
+                    android:id="@+id/rb_rating_e"
+                    android:layout_width="wrap_content"
+                    android:layout_height="26dp"
+                    android:layout_marginLeft="@dimen/top_margin12"
+                    android:layout_toRightOf="@+id/unuse_e"
+                    android:numStars="5"
+                    android:progressDrawable="@drawable/rating_gary"
+                    android:rating="0"
+                    android:stepSize="1" />
+
+                <TextView
+                    android:id="@+id/tv_show_e"
+                    style="@style/text_pink15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center_vertical"
+                    android:text="@string/plz_rating" />
+            </RelativeLayout>
+
+            <include layout="@layout/view_line"></include>
+
+            <RelativeLayout
+                style="@style/item_style_setting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false">
+
+                <TextView
+                    android:id="@+id/unuse_s"
+                    style="@style/second_text_14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/top_margin6"
+                    android:gravity="center_vertical"
+                    android:text="@string/service" />
+
+                <RatingBar
+                    android:id="@+id/rb_rating_s"
+                    android:layout_width="wrap_content"
+                    android:layout_height="26dp"
+                    android:layout_marginLeft="@dimen/top_margin12"
+                    android:layout_toRightOf="@+id/unuse_s"
+                    android:numStars="5"
+                    android:progressDrawable="@drawable/rating_gary"
+                    android:rating="0"
+                    android:stepSize="1" />
+
+                <TextView
+                    android:id="@+id/tv_show_s"
+                    style="@style/text_pink15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center_vertical"
+                    android:text="@string/plz_rating" />
+            </RelativeLayout>
+
+            <include layout="@layout/view_line"></include>
+
+            <RelativeLayout
+                style="@style/item_style_setting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false">
+
+                <TextView
+                    android:id="@+id/unuse_i"
+                    style="@style/second_text_14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/top_margin6"
+                    android:gravity="center_vertical"
+                    android:text="@string/instument" />
+
+                <RatingBar
+                    android:id="@+id/rb_rating_i"
+                    android:layout_width="wrap_content"
+                    android:layout_height="26dp"
+                    android:layout_marginLeft="@dimen/top_margin12"
+                    android:layout_toRightOf="@+id/unuse_i"
+                    android:numStars="5"
+                    android:progressDrawable="@drawable/rating_gary"
+                    android:rating="0"
+                    android:stepSize="1" />
+
+                <TextView
+                    android:id="@+id/tv_show_i"
+                    style="@style/text_pink15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center_vertical"
+                    android:text="@string/plz_rating" />
+            </RelativeLayout>
+
+            <include layout="@layout/view_line"></include>
+
+
+            <LinearLayout
+                style="@style/item_style_setting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/top_margin20"
+                android:paddingLeft="@dimen/top_margin20"
+                android:paddingRight="@dimen/top_margin20"
+                android:paddingTop="@dimen/top_margin6">
+
+                <EditText
+                    android:id="@+id/edit_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="top"
+                    android:hint="@string/hint_rating"
+                    android:lines="7"
+                    android:maxLength="120"
+                    android:textColor="@color/main_text"
+                    android:textSize="14dp" />
+
+                <TextView
+                    style="@style/second_text_12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="评论字数限制在120字以内" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/item_style_setting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/top_margin6"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/ll_photo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/top_margin4"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/ib_upload_pic"
+                        android:layout_width="0dp"
+                        android:layout_height="75dp"
+                        android:layout_weight="1"
+                        android:background="@mipmap/upload_pic" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recyclerView"
+                        android:layout_width="0dp"
+                        android:layout_height="75dp"
+                        android:layout_marginLeft="@dimen/top_margin12"
+                        android:layout_weight="3" />
+
+                </LinearLayout>
+
+                <TextView
+                    style="@style/second_text_12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/top_margin6"
+                    android:text="上传照片(最多三张)" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_over"
+                style="@style/btn_pink"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_alignParentBottom="true"
+                android:text="@string/rating_voer" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

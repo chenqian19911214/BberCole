@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="headerBarViewModel"
+            type="com.bber.company.android.viewmodel.HeaderBarViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/video_group"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:clickable="true">
+
+        <com.bber.company.android.widget.FullScreenVideoView
+            android:id="@+id/video_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true" />
+
+        <TextView
+            android:id="@+id/btn_close"
+            style="@style/text_white18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:clickable="true"
+            android:text="关闭"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/voice_name_id"
+            style="@style/text_white18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:text="papa视频名称" />
+
+        <TextView
+            android:id="@+id/change_screen"
+            style="@style/text_white18"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentTop="true"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:background="@drawable/icon_lan"
+            android:clickable="true"
+            android:visibility="visible" />
+
+        <ProgressBar
+            android:id="@+id/mp4_progressBar"
+            style="@style/progressBar_style"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            />
+
+        <ImageView
+            android:id="@+id/background_img"
+            android:layout_width="match_parent"
+            android:layout_height="207dp"
+            android:layout_centerVertical="true"
+            android:background="@color/black" />
+
+    </RelativeLayout>
+
+</layout>

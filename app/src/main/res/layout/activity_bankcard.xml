@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.bber.company.android.viewmodel.WalletViewModel" />
+
+        <variable
+            name="headerBarViewModel"
+            type="com.bber.company.android.viewmodel.HeaderBarViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+
+        <!-- 头部 -->
+        <include
+            layout="@layout/include_header"
+            app:headerBarViewModel="@{headerBarViewModel}" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/view_to_card"
+            style="@style/item_style_setting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/top_margin27"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/card_add" />
+
+            <TextView
+                style="@style/main_text_14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/top_margin20"
+                android:layout_toRightOf="@+id/add"
+                android:text="@string/add_bind_BankCard" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/arrow" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/view_add_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                style="@style/main_text_14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/top_margin6"
+                android:layout_marginLeft="@dimen/top_margin20"
+                android:layout_marginTop="@dimen/top_margin20"
+                android:text="@string/bind_BankCard_tip" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/setting_item_bg">
+
+                <android.support.v7.widget.AppCompatSpinner
+                    android:id="@+id/spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/top_margin20"
+
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/top_margin27"
+                android:background="@color/setting_item"
+                android:paddingBottom="@dimen/activity_horizontal_margin"
+                android:paddingLeft="@dimen/top_margin20"
+                android:paddingTop="@dimen/activity_horizontal_margin">
+
+
+                <TextView
+                    android:id="@+id/own_tip"
+                    style="@style/main_text_14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/card_own" />
+
+                <EditText
+                    android:id="@+id/edit_name"
+                    style="@style/main_text_14"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_toRightOf="@+id/own_tip"
+                    android:background="@null"
+                    android:hint="@string/card_own_name"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:textColorHint="@color/edite_hint" />
+
+            </RelativeLayout>
+
+            <include layout="@layout/view_line" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/setting_item"
+                android:paddingBottom="@dimen/activity_horizontal_margin"
+                android:paddingLeft="@dimen/top_margin20"
+                android:paddingTop="@dimen/activity_horizontal_margin">
+
+                <TextView
+                    android:id="@+id/card"
+                    style="@style/main_text_14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/card" />
+
+                <EditText
+                    android:id="@+id/edit_card"
+                    style="@style/main_text_14"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_toRightOf="@+id/card"
+                    android:background="@null"
+                    android:hint="@string/card_own_card"
+                    android:inputType="number"
+                    android:singleLine="true"
+                    android:textColorHint="@color/edite_hint" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btn_over"
+                style="@style/btn_pink"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/top_margin39"
+                android:enabled="false"
+                android:text="@string/over" />
+        </LinearLayout>
+
+        <!--现金提现-->
+        <LinearLayout
+            android:id="@+id/view_present"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:id="@+id/rl_bankcard"
+                style="@style/item_style_setting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/top_margin12"
+                android:onClick="chooseOnClick">
+
+                <ImageView
+                    android:id="@+id/img_bank"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/img_bank"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/bank_Name"
+                        style="@style/main_text_14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/top_margin12"
+                        android:text="选择银行" />
+
+                    <TextView
+                        android:id="@+id/bank_card"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/top_margin12"
+                        android:hint="尾号  储蓄卡"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/arrow" />
+            </RelativeLayout>
+
+            <LinearLayout
+                style="@style/item_style_setting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/top_margin12"
+                android:clickable="false"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/main_text_14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/img_alipay"
+                    android:text="提现金额" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/top_margin12"
+                    android:layout_marginTop="@dimen/top_margin12"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/main_text_30"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="¥" />
+
+                    <EditText
+                        android:id="@+id/present_money"
+                        style="@style/main_text_30"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/top_margin8"
+                        android:background="@null"
+                        android:hint="0.00"
+                        android:inputType="number"
+                        android:textColorHint="@color/edite_hint" />
+                </LinearLayout>
+
+                <include layout="@layout/view_line" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/top_margin12"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_payLimit"
+                        style="@style/text_pink12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="提现最低额度20元,预计手续费0.5%" />
+
+                    <TextView
+                        style="@style/text_pink12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="预计15分钟到账" />
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_payNext"
+                style="@style/btn_pink"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/top_margin40"
+                android:text="@string/next" />
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

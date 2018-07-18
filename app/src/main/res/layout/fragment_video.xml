@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="headerBarViewModel"
+            type="com.bber.company.android.viewmodel.HeaderBarViewModel" />
+
+        <variable
+            name="videoViewModel"
+            type="com.bber.company.android.viewmodel.VideoViewModel" />
+
+        <variable
+            name="index"
+            type="Integer" />
+
+        <import type="android.view.View" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/white"
+            android:fitsSystemWindows="true"
+            android:orientation="vertical">
+            <!-- 头部 -->
+            <include
+                layout="@layout/include_header"
+                app:headerBarViewModel="@{headerBarViewModel}" />
+
+            <!--头部-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="@drawable/icon_titile_bg"
+                android:gravity="center_vertical">
+
+
+                <LinearLayout
+                    android:id="@+id/type_Lin"
+                    android:layout_width="290dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/title_stoke"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:id="@+id/video_new"
+                        android:layout_width="0dp"
+                        android:layout_height="28dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/icon_choose_left"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/video_new_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="28dp"
+                            android:gravity="center"
+                            android:text="最新"
+                            android:textColor="@color/chat_color"
+                            android:textSize="12sp" />
+
+                        <ImageView
+                            android:id="@+id/video_new_image"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dp"
+                            android:background="@drawable/icon_menu_choose" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0.2dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/chat_color" />
+
+                    <LinearLayout
+                        android:id="@+id/video_type"
+                        android:layout_width="0dp"
+                        android:layout_height="28dp"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/video_type_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="28dp"
+                            android:gravity="center"
+                            android:text="视频"
+                            android:textColor="@color/chat_color"
+                            android:textSize="12sp" />
+
+                        <ImageView
+                            android:id="@+id/video_type_image"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dp"
+                            android:background="@drawable/icon_ecpand" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0.2dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/chat_color" />
+
+                    <TextView
+                        android:id="@+id/text_voice"
+                        android:layout_width="0dp"
+                        android:layout_height="28dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="声优"
+                        android:textColor="@color/chat_color"
+                        android:textSize="12sp" />
+
+                    <View
+                        android:layout_width="0.2dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/chat_color" />
+
+
+                    <View
+                        android:id="@+id/view_hot"
+                        android:layout_width="0.2dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/chat_color" />
+
+                    <TextView
+                        android:id="@+id/text_vr"
+                        android:layout_width="0dp"
+                        android:layout_height="28dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="VR"
+                        android:textColor="@color/chat_color"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <!--搜索的长条-->
+                <LinearLayout
+                    android:id="@+id/search_Lin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingLeft="20dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/image_change"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/back" />
+
+                    <EditText
+                        android:id="@+id/keyword_text"
+                        android:layout_width="250dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="20dp"
+                        android:gravity="center_vertical"
+                        android:hint="请输入关键字搜索"
+                        android:singleLine="true"
+                        android:textColor="@color/gray"
+                        android:textColorHint="@color/white"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/icon_search"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginLeft="8dp"
+                        android:src="@drawable/icon_search" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/icon_change"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_toRightOf="@+id/type_Lin"
+                    android:src="@drawable/icon_search" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <!--最新最热的列表-->
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/chat_viewpager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </android.support.v4.view.ViewPager>
+
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/progress_lin"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:clickable="false"
+            android:gravity="center"
+            android:visibility="@{videoViewModel.isShow?View.VISIBLE :View.GONE}">
+
+            <LinearLayout
+
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ProgressBar
+                    android:id="@+id/progress"
+                    style="@style/progressBar_style"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center" />
+                <!--<TextView-->
+                <!--android:id="@+id/tips_loading_msg"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="加载中..."-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--style="@style/text_pink14"-->
+                <!--android:visibility="visible"-->
+                <!--android:gravity="center"/>-->
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/hiding_linear"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="@color/black60"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="@{videoViewModel.isVip==true? View.VISIBLE :View.GONE}">
+
+            <Button
+                android:id="@+id/free_button"
+                android:layout_width="226dp"
+                android:layout_height="54dp"
+                android:background="@{videoViewModel.videoStatus==2?@drawable/btn_pink_corners:(videoViewModel.videoStatus==4?@drawable/btn_pink_corners:@drawable/icon_timeover)}"
+                android:enabled="@{videoViewModel.videoStatus==3?false:true}"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text='@{videoViewModel.videoStatus==2?"申请免费试用":(videoViewModel.videoStatus==4?"免费获取黄金会员":"")}'
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+
+            <Button
+                android:id="@+id/buy_vipbutton"
+                android:layout_width="226dp"
+                android:layout_height="54dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/btn_pink_corners"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="充值黄金会员"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</layout>

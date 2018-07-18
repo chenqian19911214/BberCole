@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="290dp"
+        android:layout_height="410dp"
+        android:background="@drawable/icon_is_model">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="165dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/number_model"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/game_bet"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
+
+            <TextView
+                android:layout_width="215dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="下注后可以离开游戏！系统会将中奖结果在papa内部通知到你或在游戏消息查看！"
+                android:textColor="@color/text_username"
+                android:textSize="15sp" />
+
+            <CheckBox
+                android:id="@+id/no_chenck_box"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:text="不再弹出此弹窗"
+                android:textColor="@color/text_username"
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button_cancal"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/btn_brown_stoke"
+                    android:gravity="center"
+                    android:text="再想想"
+                    android:textColor="@color/text_brown"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/button_sure"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/btn_brown_radius"
+                    android:gravity="center"
+                    android:text="就买她了"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

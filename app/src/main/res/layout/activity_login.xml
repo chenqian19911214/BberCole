@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="loginViewModel"
+            type="com.bber.company.android.viewmodel.LoginViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/toolbar"
+                layout="@layout/toolbar" />
+
+
+            <LinearLayout
+                style="@style/item_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/top_margin12"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        style="@style/main_text_14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/username"></TextView>
+
+                    <EditText
+                        android:id="@+id/edit_nickname"
+                        style="@style/normal_edit"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:hint="@string/user_hint"
+                        android:inputType="text"
+                        android:maxLength="14" />
+
+                </LinearLayout>
+
+                <include layout="@layout/view_line" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        style="@style/main_text_14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/password"></TextView>
+
+                    <EditText
+                        android:id="@+id/edit_psd"
+                        style="@style/normal_edit"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:digits="@string/psd_style"
+                        android:hint="@string/psd_hint"
+                        android:inputType="textPassword"
+                        android:maxLength="12" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_login"
+                style="@style/btn_pink"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/top_margin32"
+                android:enabled="false"
+                android:text="@string/login" />
+
+            <TextView
+                android:id="@+id/forget_psd"
+                style="@style/text_pink12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/top_margin4"
+                android:clickable="true"
+                android:paddingLeft="@dimen/top_margin5"
+                android:paddingRight="@dimen/top_margin5"
+                android:text="@string/forget_psd" />
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/bottom_layout">
+
+            <TextView
+                android:id="@+id/version"
+                style="@style/text_pink12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="@dimen/top_margin4"
+                android:clickable="true"
+                android:text="" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/bottom_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/back_color"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:id="@+id/guest_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="10dp"
+                android:text="客服协助邮箱:Xxoopapa2016@qmail.com"
+                android:textColor="@color/vip_none"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/icon_guest_service" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+</layout>

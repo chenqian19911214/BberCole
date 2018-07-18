@@ -1,0 +1,63 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page_bg">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"></include>
+
+    <LinearLayout
+        android:id="@+id/gesture_tip_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginTop="@dimen/top_margin20"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.bber.company.android.widget.LockIndicator
+            android:id="@+id/lock_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip" />
+
+        <TextView
+            android:id="@+id/text_tip"
+            style="@style/main_text_18"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:gravity="center_horizontal"
+            android:text="绘制解锁图片" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/tex_tip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/text_show"
+            style="@style/text_pink15"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="40dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="清除手势密码" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/gesture_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"></FrameLayout>
+
+</RelativeLayout>
+

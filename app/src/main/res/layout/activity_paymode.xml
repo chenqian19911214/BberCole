@@ -1,0 +1,107 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_custom_bank" />
+
+    <RelativeLayout
+        android:id="@+id/rl_unionpay"
+        style="@style/item_style_setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/top_margin6">
+
+        <ImageView
+            android:id="@+id/img_unionpay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/unionpay" />
+
+        <TextView
+            style="@style/main_text_14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/top_margin20"
+            android:layout_toRightOf="@+id/img_unionpay"
+            android:text="@string/unionpay" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/arrow" />
+    </RelativeLayout>
+
+    <include layout="@layout/view_line" />
+
+
+    <RelativeLayout
+        android:id="@+id/rl_alipay"
+        style="@style/item_style_setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img_alipay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/alipay" />
+
+        <TextView
+            style="@style/main_text_14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/top_margin20"
+            android:layout_toRightOf="@+id/img_alipay"
+            android:text="@string/alipay" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/arrow" />
+    </RelativeLayout>
+
+    <include layout="@layout/view_line" />
+
+    <RelativeLayout
+        android:id="@+id/rl_wechatpay"
+        style="@style/item_style_setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img_wechatpay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/wechatpay" />
+
+        <TextView
+            style="@style/main_text_14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/top_margin20"
+            android:layout_toRightOf="@+id/img_wechatpay"
+            android:text="@string/wechatpay" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/arrow" />
+    </RelativeLayout>
+
+</LinearLayout>

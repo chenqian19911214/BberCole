@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data class=".ActivityChatImageBinding">
+
+        <variable
+            name="viewModel"
+            type="com.bber.company.android.viewmodel.ChatPicViewModel" />
+
+        <variable
+            name="headerBarViewModel"
+            type="com.bber.company.android.viewmodel.HeaderBarViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!-- 头部 -->
+        <include
+            android:id="@+id/header_bar"
+            layout="@layout/include_header"
+            app:headerBarViewModel="@{headerBarViewModel}" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/header_bar">
+
+            <!--背景图界面-->
+            <android.support.v4.view.ViewPager
+                android:id="@+id/chat_viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </android.support.v4.view.ViewPager>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_picnum"
+            style="@style/text_white14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/top_margin20"
+            android:layout_marginTop="@dimen/top_margin20"
+            android:background="@drawable/circle_black"
+            android:gravity="center"
+            android:text="1/2"
+            android:visibility="gone" />
+
+        <!--聊天界面-->
+        <LinearLayout
+            android:id="@+id/refresh_chat_lin"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/view_edit"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="50dp"
+            android:background="@color/transparent">
+
+            <android.support.v4.widget.SwipeRefreshLayout
+                android:id="@+id/refresh_chat_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/refresh_chat_loadmore"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:dividerHeight="12dp">
+
+                </android.support.v7.widget.RecyclerView>
+            </android.support.v4.widget.SwipeRefreshLayout>
+        </LinearLayout>
+
+        <!--输入框-->
+        <RelativeLayout
+            android:id="@+id/view_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/transparent"
+            android:visibility="invisible">
+
+            <!--第一层的底部导航栏-->
+            <RelativeLayout
+                android:id="@+id/view_focus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:paddingBottom="@dimen/top_margin8"
+                android:paddingTop="@dimen/top_margin8"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/image_chat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:src="@mipmap/icon_chat" />
+
+                <RelativeLayout
+                    android:id="@+id/btn_reply"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/padding_left"
+                    android:layout_toLeftOf="@+id/btn_right">
+
+                    <ImageView
+                        android:id="@+id/btn_record"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:src="@mipmap/icon_record"
+                        android:visibility="visible" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/btn_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/padding_left">
+
+                    <CheckBox
+                        android:id="@+id/btn_gone_chat"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:background="@drawable/button_selector_barrage"
+                        android:button="@null"
+                        android:gravity="center" />
+                    <!--<ImageView-->
+                    <!--android:id="@+id/btn_gone_chat"-->
+                    <!--android:layout_width="35dp"-->
+                    <!--android:layout_height="35dp"-->
+                    <!--android:background="@drawable/icon_barrage"-->
+                    <!--android:visibility="visible">-->
+                    <!--</ImageView>-->
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <!--第二层的页面，输入框-->
+            <LinearLayout
+                android:id="@+id/view_second"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@color/black20"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/edittext_chat"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:background="@null"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:gravity="center_vertical"
+                    android:hint="和大家说点什么"
+                    android:maxLength="300"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/gray_line"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/chat_send"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:text="发送"
+                    android:textColor="@color/red"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <!--第三层的页面，输入框-->
+            <LinearLayout
+                android:id="@+id/view_third"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_toEndOf="@+id/view_focus"
+                android:layout_toRightOf="@+id/view_focus"
+                android:background="@color/black20"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:visibility="gone">
+
+                <com.bber.company.android.widget.RecordButton
+                    android:id="@+id/chat_voice"
+                    style="@style/text_gray14"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:text="按住说话" />
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</layout>

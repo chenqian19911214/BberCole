@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <com.bber.company.android.view.customcontrolview.SquareLayout
+        android:id="@+id/view_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#333333"
+        android:visibility="gone">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            fresco:actualImageScaleType="focusCrop" />
+
+        <ImageView
+            android:id="@+id/selected_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="@dimen/top_margin10"
+            android:layout_marginLeft="@dimen/top_margin10"
+            android:src="@mipmap/selected"
+            android:visibility="visible" />
+
+    </com.bber.company.android.view.customcontrolview.SquareLayout>
+
+    <com.bber.company.android.view.customcontrolview.SquareLayout
+        android:id="@+id/view_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="false">
+
+
+        <ImageView
+            android:id="@+id/camera_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/broadcast_add_poent" />
+<!--
+        <TextView
+            style="@style/text_gray14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/camera_icon"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/padding_left"
+            android:text="添加照片" />-->
+<!--
+        <ImageView
+            android:id="@+id/selected_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="@dimen/top_margin10"
+            android:layout_marginRight="@dimen/top_margin10"
+            android:src="@mipmap/selected"
+            android:visibility="visible" />-->
+    </com.bber.company.android.view.customcontrolview.SquareLayout>
+</RelativeLayout>

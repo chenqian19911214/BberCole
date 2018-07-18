@@ -1,0 +1,506 @@
+<resources>
+    <string name="app_name">PaPa</string>
+    <string name="app_chinse_name">啪啪</string>
+    <string name="abot_us_maintext">万千美模  贴心服务</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_msg">消息</string>
+    <string name="app_content">找模特、演艺、礼仪小姐，就上啪啪！</string>
+    <string name="onclick_exit">再按一次退出应用</string>
+    <string name="phone_hint">手机号码</string>
+    <string name="agree_title">啪啪免责声明</string>
+    <string name="agree_content">1、一切移动客户端用户在下载并浏览啪啪手机APP件时均被视为已经仔细阅读本条款并完全同意。凡以任何方式登陆本APP，或直接、间接使用本APP资料者，均被视为自愿接受本网站相关声明和用户服务协议的约束。
+\n\n2、啪啪手机APP转载的内容并不代表啪啪手机APP之意见及观点，也不意味着本网赞同其观点或证实其内容的真实性。
+\n\n3、啪啪手机APP转载的文字、图片、音视频等资料均由本APP用户提供，其真实性、准确性和合法性由信息发布人负责。啪啪手机APP不提供任何保证，并不承担任何法律责任。
+\n\n4、啪啪手机APP所转载的文字、图片、音视频等资料，如果侵犯了第三方的知识产权或其他权利，责任由作者或转载者本人承担，本APP对此不承担责任。
+\n\n5、啪啪手机APP不保证为向用户提供便利而设置的外部链接的准确性和完整性，同时，对于该外部链接指向的不由啪啪手机APP实际控制的任何网页上的内容，啪啪手机APP不承担任何责任。
+\n\n6、用户明确并同意其使用啪啪手机APP网络服务所存在的风险将完全由其本人承担；因其使用啪啪手机APP网络服务而产生的一切后果也由其本人承担，啪啪手机APP对此不承担任何责任。
+\n\n7、除啪啪手机APP注明之服务条款外，其它因不当使用本APP而导致的任何意外、疏忽、合约毁坏、诽谤、版权或其他知识产权侵犯及其所造成的任何损失，啪啪手机APP概不负责，亦不承担任何法律责任。
+\n\n8、对于因不可抗力或因黑客攻击、通讯线路中断等啪啪手机APP不能控制的原因造成的网络服务中断或其他缺陷，导致用户不能正常使用啪啪手机APP，啪啪手机APP不承担任何责任，但将尽力减少因此给用户造成的损失或影响。
+\n\n9、本声明未涉及的问题请参见国家有关法律法规，当本声明与国家有关法律法规冲突时，以国家法律法规为准。
+\n\n10、本网站相关声明版权及其修改权、更新权和最终解释权均属啪啪手机APP所有。\n\n
+</string>
+
+    <string name="set_psd_hint">设置密码</string>
+    <string name="reg">注册</string>
+    <string name="enter">加入</string>
+    <string name="login">登录</string>
+    <string name="goto_login">去登录</string>
+    <string name="next">下一步</string>
+    <string name="over">完成</string>
+    <string name="next_time">下次</string>
+    <string name="update">马上更新</string>
+    <string name="set_psd_tip">请设置密码(6-12位数字或字母)</string>
+    <string name="set_psd_tip_agin">请再次输入密码</string>
+    <string name="user_hint">输入用户名</string>
+    <string name="psd_hint">输入密码</string>
+    <string name="forget_psd">忘记了密码？</string>
+    <string name="find_psd">找回密码</string>
+    <string name="code_hint">输入验证码</string>
+    <string name="i_am">我是...</string>
+    <string name="man">男</string>
+    <string name="woman">女</string>
+    <string name="i_want">我想...</string>
+    <string name="find_service">找服务</string>
+    <string name="get_work">接活儿</string>
+    <string name="i_like">我喜欢...</string>
+    <string name="set_nickname_tip">请设置一个昵称</string>
+    <string name="set_cost_tip">每小时收取服务费</string>
+    <string name="set_nickname_hint">请设置12个字符内的昵称</string>
+    <string name="set_cost_hint">请设置服务费元/小时</string>
+    <string name="set_selelect_tip">请选择一个头像</string>
+    <string name="call_tip">找个模特</string>
+    <string name="matching_tip">正在为你匹配模特\n请勿走开哦</string>
+    <string name="seemore">查看更多>></string>
+
+    <string name="dialog_matching_tip">嗨~ 客人您好，欢迎来到啪啪的世界，预约我们的开始时间为下午两点！</string>
+    <string name="dialog_matching_time_miss">您好！PAPA美模在线预约时间为14:00-24:00,其他时段无法及时回复您的消息哦~！</string>
+    <string name="dialog_matching_nothing">嗨~ 客人您好，您所访问的城市暂时还没有美模提供服务哦！
+        我们近期将为本城市提供服务，敬请期待！美模入驻，</string>
+    <string name="cancle_tip">取消</string>
+    <string name="sure_tip">确定</string>
+    <string name="know_tip">知道了</string>
+    <string name="person_tip">个人中心</string>
+    <string name="profile_tip">个人资料</string>
+    <string name="safe_tip">账户与安全</string>
+    <string name="key_tip">邀请码</string>
+    <string name="my_order">我的订单</string>
+    <string name="vip_list">会员特权</string>
+    <string name="order_detail">订单详情</string>
+    <string name="bill_detail">账单详情</string>
+    <string name="key_text">你的好友可以使用下列邀请码加入Bber\n(附带应用下载链接)</string>
+    <string name="pay_tip">支付</string>
+    <string name="pay_method">支付方式</string>
+    <string name="copy_key_tip">已复制到剪贴板</string>
+    <string name="logout_tip">退出登录</string>
+    <string name="logout_text">确定退出登录？</string>
+    <string name="relogin">你的账号在其它地方登陆，请重新登录！</string>
+    <string name="conti">再看看</string>
+    <string name="back">依然退出</string>
+    <string name="back_profile_text">退出后将无法再次浏览该模特的资料哦</string>
+    <string name="LBS">无法定位，请打开定位服务</string>
+
+    <string name="msg_setting">消息设置</string>
+    <string name="msg_tip">消息提醒</string>
+    <string name="gesture_tip">手势密码</string>
+    <string name="new_msg_tip">新消息提醒</string>
+    <string name="ring_tip">提示音效</string>
+    <string name="ring">铃声</string>
+    <string name="vibrate">震动</string>
+    <string name="setting">设置</string>
+    <string name="commonproblem">常见问题</string>
+    <string name="viprivileges">会员特权</string>
+    <string name="myprifle">个人中心</string>
+    <string name="mypriflesetting">个人资料</string>
+    <string name="preference">预约筛选</string>
+    <string name="verify">手机认证</string>
+    <string name="vip_infor">会员信息</string>
+    <string name="vip_infor_qq">专属联系方式</string>
+    <string name="new_version">版本检测</string>
+    <string name="about_usus">关于我们</string>
+    <string name="clean_cache">清除缓存</string>
+    <string name="key_code_tip">当你好友使用你上面的分享码时\n你们都将获得5把钥匙</string>
+    <string name="get_key_type">获取钥匙的方法</string>
+    <string name="key_title">钥匙获得</string>
+    <string name="key">钥匙</string>
+    <string name="sign">签到</string>
+    <string name="moneybag">钱包</string>
+    <string name="coupon">代金券</string>
+    <string name="get_key_1">• 每日点击签到可以获得</string>
+    <string name="get_key_2">• 成功消费，评价后可以获得</string>
+    <string name="get_key_3">• 他人使用你的推荐码注册成功后可以获得</string>
+
+
+    <string name="change">修改</string>
+    <string name="unit">元</string>
+    <string name="advance_succ">提现申请提交成功！我们将在1~3个工作日处理完成</string>
+    <string name="advance_money">提现金额</string>
+    <string name="unable_advance">提现金额不能为0</string>
+    <string name="balance">可用余额</string>
+    <string name="my_balance">余额(元)</string>
+    <string name="order_price">订单金额(元)</string>
+    <string name="recharge">充值</string>
+    <string name="need_price">实付金额</string>
+
+    <string name="unionpay">银联卡</string>
+    <string name="alipay">支付宝</string>
+    <string name="wechatpay">微信</string>
+
+
+    <string name="pay_online">线上支付</string>
+    <string name="pay_outline">线下支付</string>
+    <string name="pay_cancle">取消订单</string>
+
+    <string name="withdraw_cash">提现</string>
+    <string name="bankcard">银行卡</string>
+    <string name="no_balance">暂无可用余额</string>
+    <string name="advance_tip">该银行卡是您唯一的提现卡，如需更换银行卡请先解除绑定</string>
+    <string name="bind_BankCard">银行卡</string>
+    <string name="my_wallet">我的钱包</string>
+    <string name="payMode">充值方式</string>
+    <string name="my_bill">账单</string>
+    <string name="my_bill_detail">账单明细</string>
+    <string name="add_bind_BankCard">添加银行卡</string>
+    <string name="bind_BankCard_tip">请绑定持卡人本人的银行卡</string>
+    <string name="card_own">持卡人</string>
+    <string name="card_own_name">请输入姓名</string>
+    <string name="card_own_card">请输入卡号</string>
+    <string name="card">卡号&#160;&#160;&#160;&#160;</string>
+    <string name="change_psd">修改登录密码</string>
+    <string name="change_phone">手机号更改</string>
+    <string name="change_phone_btn">更换手机号</string>
+    <string name="binded_phone">当前邮箱</string>
+    <string name="submit">提交</string>
+    <string name="new_phone_hint">请输入新的手机号</string>
+    <string name="old_psd_hint">请输入旧密码</string>
+    <string name="new_psd_hint">请输入新密码</string>
+    <string name="repeat_psd_hint">重复新密码</string>
+    <string name="balance_tip">余额（元）</string>
+    <string name="advance">提现</string>
+    <string name="nickname">昵称</string>
+    <string name="username">用户名</string>
+    <string name="username_iput">输入用户名</string>
+    <string name="input_old_psd">输入旧密码</string>
+    <string name="input_new_psd">输入新密码</string>
+    <string name="input_new_psd_agin">重复新密码</string>
+
+    <string name="password">密&#160;&#160;&#160;&#160;码</string>
+    <string name="new_psd">输入新密码</string>
+    <string name="new_psd_agein">重复新密码</string>
+
+    <string name="sex">性别</string>
+    <string name="upload_item1">从相册选择</string>
+    <string name="upload_item2">拍照</string>
+    <string name="key_hint_skip">请输入6位邀请码(可跳过)</string>
+    <string name="key_hint">请输入6位邀请码</string>
+    <string name="invite">邀请朋友</string>
+
+    <string name="change_one">换一个</string>
+    <string name="this_one">就这个</string>
+    <string name="image">图片</string>
+    <string name="location">位置</string>
+    <string name="send_location">发送位置</string>
+    <string name="so_short_tip">时间太短</string>
+    <string name="voice_cancle_tip">取消录音</string>
+    <string name="my_profile_pic">头像</string>
+    <string name="choose_pay">支付选择</string>
+
+    <string name="rating">发表评价</string>
+    <string name="tag_tip">请选择标签(最多三个)</string>
+    <string name="psd_style">0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz</string>
+    <string name="text_style">0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz@.</string>
+    <string name="change_sus">修改成功</string>
+
+    <!--异常-->
+    <string name="no_code">未邀请手机认证用户</string>
+    <string name="no_user">用户不存在</string>
+    <string name="no_msg">你暂时还没有消息，去匹配一个模特吧</string>
+    <string name="no_orer_item">暂无订单</string>
+    <string name="no_bill_item">暂无账单</string>
+    <string name="no_pic_item">暂无图片</string>
+    <string name="no_rating_item">暂无评价</string>
+    <string name="no_vip_item">暂无特权</string>
+    <string name="no_vip_service">暂无服务项目</string>
+    <string name="vip_tittle">会员特权</string>
+    <string name="vip_tip">VIP会员</string>
+    <string name="no_voucher">您暂时没有代金券</string>
+    <string name="no_rating">请先评分！</string>
+    <string name="no_tag">请选择一个标签！</string>
+    <string name="cancle_order_text">确定取消该订单？</string>
+    <string name="order_undone">当前有未完成的订单！</string>
+    <string name="video_null">暂无视频</string>
+    <string name="operate_fail">操作失败</string>
+    <string name="matching_fail">方圆100km,尚未匹配到模特哟！</string>
+    <string name="getData_fail">服务器异常，请稍后再试</string>
+    <string name="getData_out_time">网络超时，请稍后重试</string>
+    <string name="lbs_fail">定位失败，请确认是否开启定位和网络</string>
+    <string name="no_network">暂无网络连接</string>
+    <string name="no_bind_card">尚未绑定银行卡</string>
+    <string name="account_fail">账号或密码错误</string>
+    <string name="download_image_fail">加载图片失败</string>
+    <string name="nickname_error">昵称格式错误</string>
+    <string name="not_digit">不能为纯数字</string>
+    <string name="code_error">验证码格式错误</string>
+    <string name="psd_error">密码错误</string>
+    <string name="key_out_of">钥匙不够！</string>
+    <string name="key_error">邀请码错误</string>
+    <string name="spinner_error">请选择银行</string>
+    <string name="own_error">持卡人不能为空</string>
+    <string name="card_error">银行卡号格式错误</string>
+    <string name="old_psd_type_error">旧密码格式错误</string>
+    <string name="new_psd_type_error">新密码格式错误</string>
+    <string name="repeat_psd_error">两次密码不一致</string>
+    <string name="set_psd_error">密码长度不正确</string>
+    <string name="no_sdCard">找不到SD卡</string>
+    <string name="no_imgefile_fail">找不到图片文件</string>
+    <string name="no_file_fail">找不到文件</string>
+    <string name="crop_pick_error">无可用图片资源</string>
+    <string name="crop__wait">请等待...</string>
+    <string name="crop__saving">正在保存...</string>
+    <string name="send_fail">发送失败</string>
+    <string name="add_friend_fail">添加好友失败</string>
+    <string name="no_newversion">当前已是最新版本</string>
+    <string name="title_activity_main_activity2">MainActivity2Activity</string>
+    <string name="title_activity_mobile_verify">MobileVerifyActivity</string>
+    <string name="check_ifvip">请充值会员后再与美模聊天</string>
+    <string name="permission_on_location">请打开定位权限</string>
+    <string name="permission_on_camera">请打开相机权限</string>
+    <string name="permission_on_write">上传头像失败，请打开读写权限</string>
+
+    /*手机验证码*/
+    <string name="input_mobile">手机号</string>
+    <string name="input_verify">验证码</string>
+    <string name="mobile_num">请输入手机号码</string>
+    <string name="verify_cdoe">请输入验证码</string>
+    <string name="get_verify_code">获取验证码</string>
+    <string name="verify_title">手机认证</string>
+    <string name="mobile_style">0123456789</string>
+    <string name="mobile_update_success">手机号码注册成功</string>
+    <string name="mobile_no_verify">未认证</string>
+    <string name="mobile_verified">已认证</string>
+    <string name="mobile_charge">尊敬的用户：\n
+&#160;&#160;&#160;&#160;该功能目前不是免费状态，为保障我们的美模质量与品质，目前仅为会员提供</string>
+    <string name="mobile_notice">尊敬的用户:\n&#160;&#160;&#160;&#160;为了提供更好的服务我们将进行手机认证，
+        我们保证绝对安全并且不泄漏您的隐私，签约美模对验证手机的用户更为青睐，请验证手机后与美模交谈。</string>
+
+    <string name="mobile_notice_reminding">老司机们注意啦！\n&#160;&#160;&#160;&#160;PaPa不会在APP外的任何渠道向您要求转账、汇款。为了您的人身和财物安全，请不要与模特在APP外发生资金往来。</string>
+    <string name="vip_notice">尊敬的用户:\n&#160;&#160;&#160;&#160;为了提供更好的服务，需购买会员方能与美模交谈。</string>
+    <string name="mobile_verify_now">立即认证</string>
+    <string name="mobile_verify_remind">立即进入</string>
+    <string name="mobile_charge_now">充值会员</string>
+    <string name="alipay_notice">尊敬的用户:\n&#160;&#160;&#160;&#160;请在务必在支付宝中转入正确的金额。</string>
+    <string name="vip_get_now">立即购买</string>
+    <string name="mobile_verify_nexttime">下次再说</string>
+    <string name="mobile_verify_not_reminding">不再提醒</string>
+    <string name="mobile_mobile_num_wrong">手机号码不对,请重新输入</string>
+    <string name="mobile_get_later">秒后重新获取</string>
+    <string name="mobile_code_num_wrong">验证码错误</string>
+    <string name="mobile_num_show">***********</string>
+    <string name="vip_get">未开通会员？ 立即开通</string>
+    <string name="code_send_already">短信已经发出，请注意查收</string>
+    <string name="change_succes">修改成功</string>
+
+    <string name="my_favarite">我的收藏</string>
+    <string name="model_history_list">历史记录</string>
+    <string name="tab_home">海选</string>
+
+    <string name="no_model">无历史记录,去匹配一个模特吧</string>
+    <string name="no_favorite_model">无收藏记录</string>
+    <string name="no_place">无结果</string>
+    <string name="no_business_list">该地区暂无商户</string>
+
+    <string name="delete_this_session">手机号码未注册</string>
+    <string name="delete_this_msg">删除该会话</string>
+    <string name="delete_this_model">删除本条记录</string>
+    <string name="cancel_this_model">取消收藏</string>
+    <string name="mobile_is_exist">手机号码已存在</string>
+
+    <string name="preference_age">年龄</string>
+    <string name="preference_chooseage">请选择年龄</string>
+    <string name="preference_height">身高</string>
+    <string name="preference_chooseheight">请选择身高</string>
+    <string name="preference_chooseprice">请选择价格</string>
+    <string name="preference_cup">罩杯</string>
+    <string name="preference_feature">特点</string>
+    <string name="preference_price">价格</string>
+    <string name="action_send">发送</string>
+    <string name="send_a_add">请选择一个地址</string>
+    <string name="over_10item">收藏不能超过10个</string>
+    <string name="record_failed">录制失败</string>
+    <string name="copy_success">复制成功</string>
+    <string name="new_msg">您有一条新消息</string>
+    <string name="country">中国大陆</string>
+    <string name="country_choose">请选择国家</string>
+
+
+    <string name="send_first_info">正在查看您的资料~. </string>
+    <string name="play_erorr">播放错误，请检查您的网络</string>
+    <string name="welcome_text">中国第一美模预定平台</string>
+    <string name="rating_voer">提交评价</string>
+    <string name="entry">立即体验</string>
+    <string name="surgest_hint">您如果有其他意见和建议，请放心填写</string>
+    <string name="rating_tip">&#160;&#160;&#160;&#160;匿名评价模特&#160;&#160;&#160;&#160;&#160;</string>
+
+    <string name="psz_set_gusture_psd">请设置收拾密码 </string>
+    <string name="psz_verify_gusture_psd">请验证手势密码 </string>
+    <string name="gusture_tip">手势密码输错3次，是否重新登陆</string>
+    <string name="girl_describle">自我介绍</string>
+    <string name="girl_ablum">个人相册</string>
+    <string name="set_gesture">设置手势密码</string>
+    <string name="girl_tag">标签</string>
+    <string name="girl_describle_defualt">hello，欢迎进入我的世界</string>
+    <string name="go_to_papa">进入啪啪</string>
+    <string name="give_custom_money">本单平台补贴</string>
+    <string name="yuan">元</string>
+    <string name="illege_key_word_chat">为保证服务质量,请勿使用第三方沟通工具</string>
+    <string name="prifle_text">我</string>
+    <string name="vip_text">会员</string>
+    <string name="v_text">视频</string>
+    <string name="function_nono">功能暂未开放</string>
+    <string name="skip">跳过</string>
+
+    <string name="friend_name">好友姓名</string>
+    <string name="friend_join_time">加入时间</string>
+    <string name="friend_joined">已邀请好友</string>
+    <string name="friend_verify">手机认证</string>
+    <string name="newOrder">您有新订单，点击选择支付方式...</string>
+    <string name="final_pay">实付</string>
+    <string name="vip_service">会员特权</string>
+    <string name="city">城市</string>
+    <string name="business">商户</string>
+    <string name="discusspic">聊图</string>
+    <string name="extra_text_name">支付宝名称</string>
+    <string name="extra_text_phone">支付宝账号</string>
+    <string name="money_text">金额</string>
+    <string name="recharge_mothd">请选择充值方式</string>
+    <string name="input_axtra_name">支付宝昵称/姓名</string>
+    <string name="input_axtra_phone">登陆的支付宝手机号/邮箱</string>
+    <string name="pay_limite_money">单笔限额：5000</string>
+    <string name="pay_cost_time">预计到账时间5分钟，请耐心等待</string>
+    <string name="now_vip_level">当前等级：</string>
+    <string name="vip_service_item">服务项目</string>
+    <string name="choose_pay_mothed">请选择支付方式</string>
+    <string name="input_alipay_account">请输入正确的支付宝账户信息</string>
+    <string name="pay_over_max">单笔充值金额过大</string>
+    <string name="pay_money">请输入大于50的金额</string>
+    <string name="get_free_vip">试用会员</string>
+    <string name="vip_pay_wallet">钱包支付</string>
+    <string name="buy_vip">购买会员</string>
+    <string name="buy_vip_tip">请确认购买</string>
+    <string name="no_enough_money">余额不足，请返回充值，然后在购买会员(请进入个人中心->钱包->充值)</string>
+    <string name="wallet_no_enough_money">钱包余额不足</string>
+    <string name="enough_money">支付环境异常</string>
+    <string name="hint_search_box">请输入城市名或拼音</string>
+    <string name="nothing_found">没有搜索结果~</string>
+    <string name="locating">正在定位…</string>
+    <string name="located_city">定位城市</string>
+    <string name="select_city">选择城市</string>
+    <string name="hot_city">热门城市</string>
+    <string name="choose_city">城市选择</string>
+    <string name="located_failed">定位失败</string>
+    <string name="please_choose_city">请先选择城市</string>
+    <string name="shop_feature">商家特色</string>
+    <string name="shop_detail">商家详情</string>
+    <string name="manager_contact">联系方式</string>
+    <string name="shop_address">商家地址</string>
+    <string name="get_more">查看更多</string>
+    <string name="add_rating">点击添加一条评论</string>
+    <string name="environment">环境</string>
+    <string name="service">服务</string>
+    <string name="plz_rating">请评价</string>
+    <string name="instument">设施</string>
+    <string name="rating_business">商户评价</string>
+    <string name="hint_rating">请填写更多的评价或者建议</string>
+    <string name="upload_limit3">上传照片不要超过3张</string>
+    <string name="clean_cache_success">清除缓存成功</string>
+    <string name="no_location_infor">暂无商家精确位置信息</string>
+    <string name="bank_card">银行卡</string>
+    <string name="no_contact">网络不给力，为您重连</string>
+
+
+    <string name="drop_down_list_header_default_text">正在刷新&#8230;</string>
+    <string name="drop_down_list_header_pull_text">下拉刷新&#8230;</string>
+    <string name="drop_down_list_header_release_text">放手以刷新&#8230;</string>
+    <string name="drop_down_list_header_loading_text">加载中&#8230;</string>
+    <string name="drop_down_list_footer_default_text">加载完成</string>
+    <string name="drop_down_list_footer_loading_text">加载中&#8230;</string>
+    <string name="drop_down_list_footer_no_more_text">没有更多了</string>
+    <string name="load_not_more">已全部加载</string>
+
+    <string name="photos_num">%1$d张</string>
+    <string name="msg_no_camera">没找到摄像头</string>
+    <string name="msg_maxi_capacity">已达到照片选择上限</string>
+    <string name="commit">确定</string>
+    <string name="commit_num">确定(%1$d/%2$d)</string>
+    <string name="only_choose_num">超出可选图片张数</string>
+    <string name="finish">完成(%1$d/9)</string>
+    <string name="winner_money">恭喜%1$d号用户 “%2$s”获奖%3$s元</string>
+    <string name="winner_money_">%1$d号“%2$s”获奖%3$s元</string>
+    <string name="winner_money_win">恭喜您下注的 “%1$d”号美模获奖%2$s元</string>
+    <string name="winner_girl">恭喜%1$d号用户 “%2$s”与幸运数字一致\n 荣获奖池大奖%3$s元！</string>
+    <string name="winner_girl_win">恭喜您下注的“%1$d”号美模与幸运数字一致\n 荣获奖池大奖%2$s元！</string>
+    <string name="homenotice">请为papa打开地理位置权限再进行海选！</string>
+    <string name="loading">加载中...</string>
+
+    <string name="open">打开APP</string>
+    <string name="game_bet">您要为%d号美模下注吗？</string>
+    <string name="game_buyuser">%s号购买用户</string>
+    <string name="video_text">视频</string>
+    <string name="cancal">取消</string>
+    <string name="sure">确定</string>
+    <string name="rechoose">此月份没有图片，请重新选择</string>
+    <string name="s"></string>
+    <string name="about_us">
+ 您可信赖的实力合作伙伴：
+\nPAPA是欧洲实力投资公司注资的一款成人综合娱乐平台，历经两年PAPA始终坚持“真实，真诚”的服务宗旨，受到用户和各行合作伙伴的认可，由单纯的综合成人娱乐平台逐步成长为成人行业营销集成服务商。让每一位会员，每一位商务合作伙伴安心，放心的实现各自需求！
+\n\nPAPA官网：www.xxoopapa.net
+        \n客服QQ： 2712637347
+\n美模/直播/经理加盟QQ：3481151514
+\n广告投放QQ：2254218700
+\n微信公众号：PAPA预定平台
+
+
+    </string>
+
+    <string name="about_us1">您可信赖的实力合作伙伴：</string>
+    <string name="about_us2">PAPA是欧洲实力投资公司注资的一款成人综合娱乐平台，历经两年PAPA始终坚持“真实，真诚”的服务宗旨，受到用户和各行合作伙伴的认可，由单纯的综合成人娱乐平台逐步成长为成人行业营销集成服务商。让每一位会员，每一位商务合作伙伴安心，放心的实现各自需求！</string>
+    <string name="about_us3">PAPA官网：www.xxoopapa.net</string>
+    <string name="about_us4">客服QQ： 2712637347
+\n美模/直播/经理加盟QQ：3481151514
+\n广告投放QQ：2254218700
+\n微信公众号：PAPA萌萌说</string>
+
+    <string name="game_rule">游戏规则：\n
+    1.人满开奖，可多选。\n
+    2.第一轮开奖：光圈停留位置开出中奖美模，获得本局%1$s奖金。\n
+    3.第二轮开奖：开出宝箱美模，如宝箱美模与中奖美模一致，则获得奖池%2$s加奖。\n
+    注：每局投注金额将有%3$s奖金进入奖池
+    </string>
+    <string name="howtopay">QQ/微信/支付宝 : 主页 -> 点击右上角 -> 点击扫一扫 -> 选择最右上角按钮 -> 选择 -> 从相册中选取二维码并支付</string>
+    <string name="nodata">\?</string>
+
+
+    <string name="vip_privilege_introduce_text_one">黄金会员、体验黄金会员均可享受，观看影视内容无内置广告和病毒，为您省去时间。</string>
+    <string name="vip_privilege_introduce_text_two">黄金会员、体验黄金会员均可享受，专享优先看绿色热门视频特权，无需担心病毒弹窗。</string>
+    <string name="vip_privilege_introduce_text_thee">黄金会员、体验会员均可享受，可无限量下载保存美模套图，无网路也可欣赏。</string>
+    <string name="vip_privilege_introduce_text_four">最前沿的高清VR大片，购买VR眼镜，即可享受视觉盛宴，同顶尖女优身临其境</string>
+    <string name="vip_privilege_introduce_text_five">本功能目前正在维护中。</string>
+    <string name="vip_privilege_introduce_text_six">数千部声优小故事、撩人歌曲点燃您的激情，助您释放、挥汗如雨，伴您酣然入睡。</string>
+    <string name="vip_privilege_introduce_text_seven">足不出户，即可零距离同网红主播1V1互动，享受专属您个人的直播盛宴，由您定制，任您指挥。</string>
+    <string name="vip_privilege_introduce_text_eight">实名认证模特上门，覆盖全国，绝对隐私、国内顶尖服务，让您流连忘返。终身黄金会员专享1V1售后回访。</string>
+    <string name="vip_privilege_introduce_text_nine">在线客服：1V1专属客服，提供最人性、最完善、最贴心的服务，24H陪伴守候。高V专项：终身黄金会员享受客服热线优先接入特权。</string>
+    <string name="vip_privilege_introduce_text_ten">只需一键转发，即可邀请好友参与体验极致视觉盛宴。 填写推荐人同享推荐优惠。无限分享，无限红包，红包可参与APP内任一消费，为您累积老司机娱乐资金。</string>
+    <string name="title_activity_live_broadcast_details">LiveBroadcastDetailsActivity</string>
+    <string name="title_activity_live_broadcast_authentication">
+        LiveBroadcastAuthenticationActivity
+    </string>
+    <string name="title_activity_live_broadcast_agreement">LiveBroadcastAgreementActivity</string>
+    <string name="title_activity_live_broadcast_authentication_photo">Sign in</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="upload_photo_text">上传本人五官清晰自拍无水印照片。请勿上传多人合影及不雅照片</string>
+    <string name="upload_vodeo_text">播报正确的验证数字，拍摄本人清晰的视频。请勿上传多人及不雅视频，本视频不会公开，仅做认证使用。</string>
+    <string name="upload_video_refuse"> 已经拒绝的的直播请求。</string>
+    <string name="title_activity_rec">RECActivity</string>
+    <string name="title_activity_edit_broadcast_data">EditBroadcastDataActivity</string>
+    <string name="title_activity_photo_album">PhotoAlbumActivity</string>
+    <string name="title_activity_photo_wall">PhotoWallActivity</string>
+    <string name="title_activity_broadcast_edit_data">BroadcastEditDataActivity</string>
+    <string name="title_activity_live_broadcast_search">LiveBroadcastSearchActivity</string>
+    <string name="title_activity_broadcasr_classification">BroadcasrClassificationActivity</string>
+    <string name="title_activity_video_call_activity">VideoCallActivityActivity</string>
+    <string name="agora_app_id">91da0d2e38e74dd28d37d14ef166acfb</string>
+    <string name="title_activity_broadcast_chat">BroadcastChatActivity</string>
+    <string name="title_activity_streaming_media_video" >StreamingMediaVideoActivity</string>
+</resources>

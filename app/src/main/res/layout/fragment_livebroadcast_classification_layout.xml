@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bber.company.android.view.customcontrolview.PullToRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/refresh_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="beforeDescendants"
+    android:orientation="vertical">
+
+    <include layout="@layout/refresh_head" />
+
+    <com.bber.company.android.view.customcontrolview.PullableListView
+        android:id="@+id/content_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent"
+        android:divider="@color/transparent"
+        android:dividerHeight="4dp"
+        android:focusable="false" />
+
+    <include layout="@layout/load_more" />
+
+
+</com.bber.company.android.view.customcontrolview.PullToRefreshLayout>

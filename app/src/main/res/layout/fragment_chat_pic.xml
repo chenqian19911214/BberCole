@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data class=".FragmentChatBinding">
+
+        <variable
+            name="recyclerViewModel"
+            type="com.bber.company.android.viewmodel.ChatPicViewModel" />
+
+        <variable
+            name="headerBarViewModel"
+            type="com.bber.company.android.viewmodel.HeaderBarViewModel" />
+
+        <variable
+            name="index"
+            type="Integer" />
+
+        <import type="android.view.View" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/white"
+            android:orientation="vertical">
+            <!-- 头部 -->
+            <include
+                layout="@layout/include_header"
+                app:headerBarViewModel="@{headerBarViewModel}" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="@drawable/icon_titile_bg"
+                android:gravity="center">
+
+                <android.support.design.widget.TabLayout
+                    android:id="@+id/tablelayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="44dp"
+                    android:layout_centerHorizontal="true"
+                    android:background="@color/white"
+                    android:visibility="gone"
+                    app:tabGravity="fill"
+                    app:tabIndicatorColor="@color/pink"
+                    app:tabMode="fixed"
+                    app:tabPadding="5dp"
+                    app:tabSelectedTextColor="@color/pink"
+                    app:tabTextColor="@color/gray"></android.support.design.widget.TabLayout>
+
+                <LinearLayout
+                    android:layout_width="290dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/title_stoke"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/text_new"
+                        android:layout_width="0dp"
+                        android:layout_height="28dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/icon_choose_left"
+                        android:gravity="center"
+                        android:text="最新"
+                        android:textColor="@color/chat_color"
+                        android:textSize="12sp" />
+
+                    <View
+                        android:layout_width="0.2dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/chat_color" />
+
+                    <TextView
+                        android:id="@+id/text_mms"
+                        android:layout_width="0dp"
+                        android:layout_height="28dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="萌萌说"
+                        android:textColor="@color/chat_color"
+                        android:textSize="12sp" />
+
+                    <View
+                        android:layout_width="0.2dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/chat_color" />
+
+                    <LinearLayout
+                        android:id="@+id/linear_hot"
+                        android:layout_width="0dp"
+                        android:layout_height="28dp"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/text_seven"
+                            android:layout_width="wrap_content"
+                            android:layout_height="28dp"
+                            android:gravity="center"
+                            android:text="周热度"
+                            android:textColor="@color/chat_color"
+                            android:textSize="12sp" />
+
+                        <ImageView
+                            android:id="@+id/image_tri"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dp"
+                            android:background="@drawable/icon_ecpand" />
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/view_hot"
+                        android:layout_width="0.2dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/chat_color" />
+
+                    <TextView
+                        android:id="@+id/text_shake"
+                        android:layout_width="0dp"
+                        android:layout_height="28dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="摇图"
+                        android:textColor="@color/chat_color"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <!--最新最热的列表-->
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/chat_viewpager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </android.support.v4.view.ViewPager>
+
+
+            </RelativeLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/hiding_linear"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="@color/black60"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="@{recyclerViewModel.isShow==true? View.VISIBLE :View.GONE}">
+
+            <Button
+                android:id="@+id/free_button"
+                android:layout_width="226dp"
+                android:layout_height="54dp"
+                android:background="@{recyclerViewModel.tpfStatus==2?@drawable/btn_pink_corners:(recyclerViewModel.tpfStatus==4?@drawable/btn_pink_corners:@drawable/icon_timeover)}"
+                android:enabled="@{recyclerViewModel.tpfStatus==3?false:true}"
+                android:gravity="center"
+                android:onClick="onFressClick"
+                android:padding="10dp"
+                android:text='@{recyclerViewModel.tpfStatus==2?"申请免费试用":(recyclerViewModel.tpfStatus==4?"免费获取黄金会员":"")}'
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+
+            <Button
+                android:id="@+id/buy_vipbutton"
+                android:layout_width="226dp"
+                android:layout_height="54dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/btn_pink_corners"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="充值黄金会员"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

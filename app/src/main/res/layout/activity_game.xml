@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:wheel="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.bber.company.android.viewmodel.GameViewModel" />
+
+        <!--<variable-->
+        <!--name="headerBarViewModel"-->
+        <!--type="com.bber.company.android.viewmodel.HeaderBarViewModel" />-->
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/game_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:id="@+id/visLin"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/hiding_linear"
+            android:layout_toRightOf="@+id/hiding_linear"
+            android:fitsSystemWindows="true"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <!--上方的控件列表-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/return_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="13dp"
+                        android:src="@drawable/icon_return" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="看客"
+                        android:textColor="@color/text_purple"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/watching"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/btn_gold_stoke"
+                        android:text="0"
+                        android:textColor="@color/text_glod"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="钱包"
+                        android:textColor="@color/text_purple"
+                        android:textSize="14sp" />
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/game_wallert"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/btn_gold_stoke"
+                            android:singleLine="true"
+                            android:text="1000"
+                            android:textColor="@color/text_glod"
+                            android:textSize="14sp" />
+
+                        <ImageView
+                            android:id="@+id/add_money"
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:layout_marginLeft="-10dp"
+                            android:layout_marginTop="7dp"
+                            android:background="@drawable/icon_more_money" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="251dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="66dp"
+                        android:background="@drawable/icon_lucky_model"
+                        android:gravity="center_horizontal">
+
+                        <TextView
+                            android:id="@+id/limit_table"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="36dp"
+                            android:text="10元桌"
+                            android:textColor="@color/text_glod"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="222dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="4dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/marqueeView_lin"
+                            android:layout_width="match_parent"
+                            android:layout_height="65dp"
+                            android:background="@drawable/icon_bigmar"
+                            android:gravity="center"
+                            android:paddingBottom="18dp"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:singleLine="true"
+                            android:textColor="@color/text_mar"
+                            android:textSize="10sp"
+                            android:typeface="serif">
+
+                            <com.bber.company.android.widget.MarqueeView
+                                android:id="@+id/marqueeView"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                android:typeface="serif" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/game_state"
+                            android:layout_width="170dp"
+                            android:layout_height="35dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="-30dp"
+                            android:background="@drawable/icon_small_mar"
+                            android:gravity="center"
+                            android:paddingBottom="5dp"
+                            android:text="请尽快下注"
+                            android:textColor="@color/text_mar"
+                            android:textSize="11sp"
+                            android:typeface="sans" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/menu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="13dp"
+                        android:src="@drawable/icon_detail" />
+
+
+                    <TextView
+                        android:id="@+id/free_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/menu"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:text="活动点数"
+                        android:textColor="@color/text_purple"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/free_money"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/free_text"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/btn_gold_stoke"
+                        android:text="0"
+                        android:textColor="@color/text_glod"
+                        android:textSize="14sp" />
+
+                    <LinearLayout
+                        android:id="@+id/meaulin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/menu"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/back_toptitle_menu"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/game_voice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:background="@drawable/game_voice_" />
+
+                        <ImageView
+                            android:id="@+id/game_winhistory"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:background="@drawable/icon_history" />
+
+                        <ImageView
+                            android:id="@+id/game_rule_detail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:background="@drawable/game_rule" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+
+
+            <!--中间的空间列表-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="360dp"
+                android:layout_gravity="center">
+
+                <com.bber.company.android.widget.LuckyMonkeyPanelView
+                    android:id="@+id/lucky_panel"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true" />
+
+                <RelativeLayout
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    android:layout_centerInParent="true"
+                    android:paddingBottom="13dp">
+
+
+                    <ImageView
+                        android:id="@+id/chest_image"
+                        android:layout_width="50dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginBottom="20dp"
+                        android:background="@drawable/icon_chest" />
+
+                    <com.bber.company.android.widget.UnlimitViewPager
+                        android:id="@+id/viewpager_change"
+                        android:layout_width="50dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginBottom="20dp"
+                        android:visibility="gone">
+
+                    </com.bber.company.android.widget.UnlimitViewPager>
+
+                    <Button
+                        android:id="@+id/btn_action"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/icon_prizepool_"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/prizeool_data"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="38dp"
+                        android:gravity="center_horizontal"
+                        android:singleLine="true"
+                        android:text="1000"
+                        android:textColor="@color/text_glod"
+                        android:textSize="14sp" />
+                    <!--<com.bber.company.android.widget.ImageMoveView-->
+                    <!--android:id="@+id/image_move"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="40dp"-->
+                    <!--android:layout_alignParentBottom="true"-->
+                    <!--android:layout_centerInParent="true"-->
+                    <!--android:layout_marginBottom="18dp"-->
+                    <!--android:background="@drawable/icon_chest">-->
+
+                    <!--</com.bber.company.android.widget.ImageMoveView>-->
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/icon_bottom"></LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_alignParentBottom="true">
+
+                    <com.bber.company.android.widget.BannerView
+                        android:id="@+id/game_viewpager"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"></com.bber.company.android.widget.BannerView>
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/game_history"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black"
+            android:gravity="right"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <Button
+                android:id="@+id/cancal_history"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/icon_cancal" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/history_list"
+                style="@style/text_white15"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="30dp"
+                android:lineSpacingExtra="10dp"
+                android:paddingLeft="10dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/no_winner"
+            android:layout_width="240dp"
+            android:layout_height="68dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/icon_no_winer"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/spectators"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <com.bber.company.android.widget.ProgressWheel
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:clickable="false"
+                android:gravity="center"
+                wheel:matProg_barColor="#ff0066"
+                wheel:matProg_progressIndeterminate="true" />
+
+            <TextView
+                android:id="@+id/tips_loading_msg"
+                style="@style/text_pink14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="加载中..."
+                android:visibility="visible" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/game_rule"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/text_rule"
+                style="@style/text_white15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="10dp"
+                android:padding="30dp"
+                android:text="@string/game_rule" />
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/hiding_linear"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black30"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/money_winner"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/icon_winner_money"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/winner_money_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="60dp"
+                    android:gravity="center_horizontal"
+                    android:maxLines="1"
+                    android:text='@string/winner_money'
+                    android:textColor="@color/text_glod"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/girl_winner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/icon_winner_girl"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/winner_girl_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="160dp"
+                    android:gravity="center"
+                    android:text='@string/winner_girl'
+                    android:textColor="@color/text_glod"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/game_guidebg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:background="@color/black90"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/game_guide1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/icon_ganme_guide1"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/game_guide2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="110dp"
+                android:background="@drawable/icon_ganme_guide2"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/game_guide3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="310dp"
+                android:background="@drawable/icon_ganme_guide3"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</layout>

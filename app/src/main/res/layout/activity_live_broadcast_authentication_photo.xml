@@ -1,0 +1,112 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#242335"
+    android:orientation="vertical"
+    tools:context="com.bber.company.android.view.activity.LiveBroadcastAuthenticationPhotoActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_custom" />
+
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/upload_photo_image"
+        android:layout_width="80dip"
+        android:layout_height="80dip"
+        android:layout_below="@id/toolbar"
+        android:layout_marginLeft="@dimen/top_margin30"
+        android:layout_marginRight="@dimen/top_margin30"
+        android:layout_marginTop="@dimen/top_margin20"
+        fresco:placeholderImage="@mipmap/authentication_photo" />
+
+    <ImageView
+        android:id="@+id/upload_photo_image_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/upload_photo_image"
+        android:layout_marginBottom="20dp"
+        android:layout_toEndOf="@+id/upload_photo_image"
+        android:layout_toRightOf="@+id/upload_photo_image"
+        android:src="@mipmap/authentication_upload_photo" />
+
+    <TextView
+        android:id="@+id/zhenrtoux"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/upload_photo_image"
+        android:layout_marginLeft="@dimen/top_margin30"
+        android:layout_marginTop="@dimen/top_margin10"
+        android:text="真人头像"
+        android:textColor="@color/liveboadcast_textok"
+        android:textSize="@dimen/vipjies" />
+
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/zhenrtoux"
+        android:layout_marginLeft="@dimen/top_margin30"
+        android:layout_marginRight="@dimen/top_margin30"
+        android:layout_marginTop="10dp"
+        android:text="@string/upload_photo_text"
+        android:textColor="#999999"
+        android:textSize="@dimen/zhubotext" />
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/upload_voideo_image"
+        android:layout_width="80dip"
+        android:layout_height="110dip"
+        android:layout_below="@id/text2"
+        android:layout_marginLeft="@dimen/top_margin30"
+        android:layout_marginRight="@dimen/top_margin30"
+        android:layout_marginTop="30dp"
+        fresco:placeholderImage="@mipmap/authentication_video" />
+
+    <ImageView
+        android:id="@+id/upload_photo_devoid_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/upload_voideo_image"
+        android:layout_marginBottom="20dp"
+        android:layout_toEndOf="@+id/upload_voideo_image"
+        android:layout_toRightOf="@+id/upload_voideo_image"
+        android:src="@mipmap/authentication_upload_video" />
+
+    <TextView
+        android:id="@+id/zhenrtship"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/upload_voideo_image"
+
+        android:layout_marginLeft="@dimen/top_margin30"
+        android:layout_marginTop="10dp"
+        android:text="视频认证"
+        android:textColor="@color/liveboadcast_textok"
+        android:textSize="@dimen/vipjies" />
+
+    <TextView
+        android:id="@+id/text23"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/zhenrtship"
+        android:layout_marginLeft="@dimen/top_margin30"
+        android:layout_marginRight="@dimen/top_margin30"
+        android:layout_marginTop="10dp"
+        android:text="@string/upload_vodeo_text"
+        android:textColor="#999999"
+        android:textSize="@dimen/zhubotext" />
+
+    <ImageView
+        android:id="@+id/upload_start_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/top_margin30"
+        android:layout_marginLeft="@dimen/top_margin40"
+        android:layout_marginRight="@dimen/top_margin40"
+        android:src="@mipmap/authentication_start" />
+</RelativeLayout>

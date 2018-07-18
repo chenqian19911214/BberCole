@@ -1,0 +1,117 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_custom" />
+
+    <ScrollView
+        android:id="@+id/scroll_viewid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                style="@style/item_style_setting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/top_margin12"
+                android:clickable="false"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/main_text_14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/img_alipay"
+                    android:text="@string/money_text"
+                    android:textColor="@color/textcolor" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/top_margin12"
+                    android:layout_marginTop="@dimen/top_margin12"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/main_text_30"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="¥" />
+
+                    <EditText
+                        android:id="@+id/et_money"
+                        style="@style/main_text_30"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/top_margin8"
+                        android:background="@null"
+                        android:hint="0.00"
+                        android:inputType="number"
+                        android:textColorHint="@color/edite_hint" />
+                </LinearLayout>
+
+                <include layout="@layout/view_line" />
+
+                <TextView
+                    android:id="@+id/tv_payLimit"
+                    style="@style/main_text_14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/top_margin12"
+                    android:text="@string/pay_limite_money"
+                    android:textColor="@color/textcolor" />
+
+                <TextView
+                    style="@style/text_pink12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pay_cost_time" />
+
+            </LinearLayout>
+
+            <TextView
+                style="@style/text_gray14"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="@dimen/top_margin15"
+                android:gravity="center_vertical"
+                android:text="支付方式"
+                android:textColor="@color/textcolor" />
+
+            <LinearLayout
+                android:id="@+id/vip_payfor"
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <com.bber.company.android.view.customcontrolview.ListViewPay
+                    android:id="@+id/payintlistviewid"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_payNext"
+        style="@style/btn_pink"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/next" />
+</LinearLayout>

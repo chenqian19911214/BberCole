@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_district"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/page_bg"
+    android:gravity="center_horizontal"
+    android:padding="@dimen/top_margin20"
+    android:visibility="gone"
+    tools:showIn="@layout/activity_city_list">
+
+    <GridView
+        android:id="@+id/gd_district"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:cacheColorHint="@android:color/transparent"
+        android:horizontalSpacing="12dp"
+        android:listSelector="@android:color/transparent"
+        android:numColumns="3"
+        android:scrollbars="none"
+        android:verticalSpacing="12dp" />
+
+</LinearLayout>

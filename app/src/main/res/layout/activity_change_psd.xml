@@ -1,0 +1,102 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page_bg"
+    android:fitsSystemWindows="true"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_custom" />
+
+    <LinearLayout
+        android:id="@+id/ll_old_psd"
+        style="@style/item_style_setting"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:clickable="false"
+        android:gravity="center_vertical">
+
+        <TextView
+            style="@style/main_text_14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/input_old_psd"></TextView>
+
+        <EditText
+            android:id="@+id/edit_old_psd"
+            style="@style/normal_edit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:digits="@string/psd_style"
+            android:hint="@string/old_psd_hint"
+            android:inputType="textPassword"
+            android:maxLength="12" />
+    </LinearLayout>
+
+    <include layout="@layout/view_line" />
+
+    <LinearLayout
+        style="@style/item_style_setting"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:clickable="false"
+        android:gravity="center_vertical">
+
+        <TextView
+            style="@style/main_text_14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/input_new_psd"></TextView>
+
+        <EditText
+            android:id="@+id/edit_new_psd"
+            style="@style/normal_edit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:digits="@string/psd_style"
+            android:hint="@string/new_psd_hint"
+            android:inputType="textPassword"
+            android:maxLength="12" />
+
+    </LinearLayout>
+
+    <include layout="@layout/view_line" />
+
+    <LinearLayout
+        style="@style/item_style_setting"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:clickable="false"
+        android:gravity="center_vertical">
+
+        <TextView
+            style="@style/main_text_14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/input_new_psd_agin"></TextView>
+
+        <EditText
+            android:id="@+id/edit_repeat_psd"
+            style="@style/normal_edit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:digits="@string/psd_style"
+            android:hint="@string/repeat_psd_hint"
+            android:inputType="textPassword"
+            android:maxLength="12" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn"
+        style="@style/btn_pink"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/top_margin32"
+        android:enabled="false"
+        android:text="@string/over" />
+</LinearLayout>

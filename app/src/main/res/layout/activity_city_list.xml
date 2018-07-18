@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page_bg"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_custom_city" />
+
+    <include layout="@layout/view_search" />
+
+    <RelativeLayout
+        android:id="@+id/rl_choose_distirct"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/setting_item_bg"
+        android:paddingBottom="@dimen/top_margin12"
+        android:paddingLeft="@dimen/top_margin12"
+        android:paddingRight="@dimen/top_margin20"
+        android:paddingTop="@dimen/top_margin12">
+
+        <TextView
+            android:id="@+id/tv_now_city"
+            style="@style/main_text_14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_district_name"
+            style="@style/second_text_14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:drawablePadding="@dimen/top_margin6"
+            android:drawableRight="@mipmap/down" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/listview_all_city"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="@android:color/transparent"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="0dp"
+            android:listSelector="@android:color/transparent" />
+
+        <TextView
+            android:id="@+id/tv_letter_overlay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@color/pink"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="48sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <com.bber.company.android.widget.SideLetterBar
+            android:id="@+id/side_letter_bar"
+            android:layout_width="36dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            tools:ignore="RtlHardcoded" />
+
+        <ListView
+            android:id="@+id/listview_search_result"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:cacheColorHint="@android:color/transparent"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="0dp"
+            android:listSelector="@android:color/transparent"
+            android:visibility="gone" />
+
+        <include layout="@layout/view_no_search_result" />
+
+
+        <View
+            android:id="@+id/alpha_back"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black30"
+            android:clickable="true"
+            android:visibility="gone" />
+
+        <include layout="@layout/view_disrtict_eara" />
+    </RelativeLayout>
+</LinearLayout>

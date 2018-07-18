@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.bber.company.android.viewmodel.UserViewModel" />
+
+        <variable
+            name="headerBarViewModel"
+            type="com.bber.company.android.viewmodel.HeaderBarViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp">
+
+            <ImageView
+                android:id="@+id/icon_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="21dp"
+                android:background="@drawable/icon_back1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="注册"
+                android:textColor="@color/pink"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp">
+
+            <RadioGroup
+                android:id="@+id/radio_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radio_sex_man"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="40dp"
+                    android:background="@drawable/button_selector_sex_man"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:tag="1" />
+
+                <RadioButton
+                    android:id="@+id/radio_sex_woman"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:background="@drawable/button_selector_sex_woman"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:tag="2" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/gray_black12"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="40dp"
+                android:gravity="center"
+                android:text="帅哥"
+                android:textColor="@color/btn_unable" />
+
+            <TextView
+                style="@style/gray_black12"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:gravity="center"
+                android:text="美女"
+                android:textColor="@color/btn_unable" />
+
+        </LinearLayout>
+
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:text="注册成功后，性别不能修改"-->
+        <!--style="@style/text_pink12"/>-->
+
+        <!--<TextView-->
+        <!--style="@style/gray_black12"-->
+        <!--android:textColor="@color/text_username"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="20dp"-->
+        <!--android:layout_marginRight="20dp"-->
+        <!--android:layout_marginTop="25dp"-->
+        <!--android:text="出生日期"/>-->
+        <TextView
+            android:id="@+id/use_age"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="45dp"
+            android:background="@null"
+            android:drawableLeft="@drawable/icon_data_reg"
+            android:drawablePadding="15dp"
+            android:gravity="center_vertical"
+            android:hint="出生年月日"
+            android:onClick="alartOnclick"
+            android:paddingBottom="10dp"
+            android:textColorHint="@color/vip_none"
+            android:textSize="12sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/pink" />
+
+        <EditText
+            android:id="@+id/recommed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@null"
+            android:drawableLeft="@drawable/icon_recommed"
+            android:drawablePadding="15dp"
+            android:gravity="center_vertical"
+            android:hint="推荐人账号"
+            android:paddingBottom="10dp"
+            android:textColorHint="@color/vip_none"
+            android:textSize="12sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/pink" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/icon_reward" />
+        <!--<TextView-->
+        <!--style="@style/gray_black12"-->
+        <!--android:textColor="@color/text_username"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="20dp"-->
+        <!--android:layout_marginRight="20dp"-->
+        <!--android:layout_marginTop="20dp"-->
+        <!--android:text="密码(请设置6-12位数字或字母)"/>-->
+        <!--<EditText-->
+        <!--android:id="@+id/userPassword"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--style="@style/MyEditText"-->
+        <!--android:layout_marginLeft="20dp"-->
+        <!--android:inputType="textPassword"-->
+        <!--android:layout_marginRight="20dp"-->
+        <!--android:layout_marginTop="10dp" />-->
+
+        <!--<TextView-->
+        <!--style="@style/gray_black12"-->
+        <!--android:textColor="@color/text_username"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="20dp"-->
+        <!--android:layout_marginRight="20dp"-->
+        <!--android:layout_marginTop="20dp"-->
+        <!--android:text="重复密码(请再次输入密码)"/>-->
+
+        <!--<EditText-->
+        <!--android:id="@+id/user_pas_again"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--style="@style/MyEditText"-->
+        <!--android:inputType="textPassword"-->
+        <!--android:layout_marginLeft="20dp"-->
+        <!--android:layout_marginRight="20dp"-->
+        <!--android:layout_marginTop="10dp"/>-->
+        <Button
+            android:layout_width="130dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="75dp"
+            android:background="@drawable/btn_pink_next"
+            android:gravity="center"
+            android:onClick="submit"
+            android:text="完成"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+    </LinearLayout>
+</layout>

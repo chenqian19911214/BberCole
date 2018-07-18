@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.bber.company.android.view.activity.VipPrivilegesActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_custom" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/vip_priviler_reyclerview_id"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:background="@mipmap/viprivileges_menu" />
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vip_privige_viewpager_id"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1" />
+
+    <!--
+ -->
+
+</LinearLayout>

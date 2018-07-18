@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dialog_bg"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/dialog_broadecase_test"
+        style="@style/main_text_18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/top_margin15"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal"
+        android:text="王美玲请求与你视频通话"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/top_margin8">
+
+        <TextView
+            android:id="@+id/dialog_broadecase_on"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/map_height"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="#000"
+            android:text="拒绝"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/dialog_broadecase_ok"
+            android:textSize="14sp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="#000"
+            android:text="允许" />
+    </LinearLayout>
+
+</LinearLayout>

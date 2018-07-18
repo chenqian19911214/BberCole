@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/setting_item_bg"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/im_vip_icon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center_horizontal"
+        android:scaleType="fitCenter" />
+
+    <TextView
+        android:id="@+id/tv_vip_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/top_margin6" />
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_vip_money"-->
+    <!--android:background="@drawable/btn_corner_bg"-->
+    <!--android:textColor="@color/tag_text_color"-->
+    <!--android:layout_marginTop="@dimen/top_margin6"-->
+    <!--android:layout_gravity="center_horizontal"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content" />-->
+
+</LinearLayout>

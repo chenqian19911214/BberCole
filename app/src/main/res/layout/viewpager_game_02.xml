@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.bber.company.android.viewmodel.GameViewModel" />
+
+        <variable
+            name="headerBarViewModel"
+            type="com.bber.company.android.viewmodel.HeaderBarViewModel" />
+
+        <variable
+            name="index"
+            type="Integer" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingTop="10dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/center_pic"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/hot1"
+                style="@style/text_white24"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/icon_game_redmoney"
+                android:gravity="center"
+                android:text="@string/nodata" />
+
+            <TextView
+                android:id="@+id/hot2"
+                style="@style/text_white24"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/icon_game_redmoney"
+                android:gravity="center"
+                android:text="@string/nodata" />
+
+            <TextView
+                android:id="@+id/hot3"
+                style="@style/text_white24"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/icon_game_redmoney"
+                android:gravity="center"
+                android:text="@string/nodata" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/center_pic"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center_vertical"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="热门"
+                android:textColor="@color/text_glod"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/icon_winner"
+                android:textColor="@color/text_glod"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="冷门"
+                android:textColor="@color/text_glod"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+        i
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/center_pic"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/cold1"
+                style="@style/text_white24"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/icon_game_bluemoney"
+                android:gravity="center"
+                android:text="@string/nodata" />
+
+            <TextView
+                android:id="@+id/cold2"
+                style="@style/text_white24"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/icon_game_bluemoney"
+                android:gravity="center"
+                android:text="@string/nodata" />
+
+            <TextView
+                android:id="@+id/cold3"
+                style="@style/text_white24"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/icon_game_bluemoney"
+                android:gravity="center"
+                android:text="@string/nodata" />
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>

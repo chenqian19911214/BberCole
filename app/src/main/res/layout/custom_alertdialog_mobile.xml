@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dialog_bg"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/dialog_text"
+        style="@style/main_text_16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/top_margin15"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:lineSpacingExtra="3dp"
+        android:text="@string/mobile_notice" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/top_margin8">
+
+        <TextView
+            android:id="@+id/dialog_cancle"
+            style="@style/text_gray14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/verify_text_marginRight"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="@string/mobile_verify_nexttime" />
+
+        <TextView
+            android:id="@+id/dialog_sure"
+            style="@style/text_pink14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="@string/mobile_verify_now"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</LinearLayout>

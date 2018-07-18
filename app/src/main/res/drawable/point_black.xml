@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval"
+    android:useLevel="false">
+    <!-- innerRadius尺寸，内环的半径-->
+    <!-- thickness，尺寸，环的厚度-->
+
+
+    <!-- 填充 -->
+    <solid android:color="#ffffff" />
+
+    <!-- 边框 -->
+    <padding
+        android:bottom="0dp"
+        android:left="0dp"
+        android:right="0dp"
+        android:top="0dp" />
+    <size
+        android:width="14dp"
+        android:height="14dp" />
+</shape>

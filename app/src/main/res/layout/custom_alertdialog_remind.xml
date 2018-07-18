@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dialog_bg"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/dialog_reminding_text"
+        style="@style/main_text_16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/top_margin15"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:lineSpacingExtra="3dp"
+        android:text="@string/mobile_notice_reminding" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/top_margin8">
+
+        <CheckBox
+            android:id="@+id/dialog_checkBox_cancle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/map_height"
+            android:layout_weight="1"
+            android:checked="false"
+            android:gravity="center"
+            android:text="@string/mobile_verify_not_reminding"
+            android:textColor="#666666"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/dialog_reminding_sure"
+            style="@style/text_pink14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="@string/mobile_verify_remind"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</LinearLayout>

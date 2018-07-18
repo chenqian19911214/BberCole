@@ -1,0 +1,232 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_custom" />
+
+    <RelativeLayout
+        android:id="@+id/rl_profile_pic"
+        style="@style/item_style_setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/top_margin12">
+
+        <TextView
+            style="@style/main_text_14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/my_profile_pic" />
+
+        <!--  fresco:roundingBorderColor="@color/pink"
+            fresco:roundingBorderWidth="2dp" -->
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/user_icon"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginRight="@dimen/top_margin8"
+            android:layout_toLeftOf="@+id/mypic_arrow"
+            fresco:placeholderImage="@mipmap/user_icon"
+            fresco:roundAsCircle="true" />
+
+        <ImageView
+            android:id="@+id/mypic_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/arrow" />
+    </RelativeLayout>
+
+    <include layout="@layout/view_line" />
+
+    <RelativeLayout
+        android:id="@+id/my_name"
+        style="@style/item_style_setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            style="@style/main_text_14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/nickname" />
+
+        <TextView
+            android:id="@+id/mynick_name"
+            style="@style/main_text_14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+
+    <include layout="@layout/view_line" />
+
+    <RelativeLayout
+        android:id="@+id/btn_verify"
+        style="@style/item_style_setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            style="@style/main_text_14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/verify" />
+
+        <TextView
+            android:id="@+id/text_phone"
+            style="@style/main_text_14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/phone_text_marginRight"
+            android:layout_toLeftOf="@+id/textview_verify"
+            android:text="@string/mobile_num_show"
+            android:visibility="gone" />
+
+
+        <TextView
+            android:id="@+id/textview_verify"
+            style="@style/main_text_14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@mipmap/btn_border_radius" />
+    </RelativeLayout>
+
+    <include layout="@layout/view_line" />
+
+    <RelativeLayout
+        style="@style/item_style_setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            style="@style/main_text_14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="性别" />
+
+        <TextView
+            android:id="@+id/sex_text"
+            style="@style/main_text_14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/phone_text_marginRight"
+            android:layout_toLeftOf="@+id/textview_sex"
+            android:text="@string/mobile_num_show"
+            android:visibility="gone" />
+
+
+        <TextView
+            android:id="@+id/textview_sex"
+            style="@style/main_text_14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="@string/mobile_no_verify" />
+    </RelativeLayout>
+
+    <include layout="@layout/view_line" />
+
+    <RelativeLayout
+        style="@style/item_style_setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            style="@style/main_text_14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="出生日期" />
+
+        <TextView
+            style="@style/main_text_14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/phone_text_marginRight"
+            android:layout_toLeftOf="@+id/textview_birthday"
+            android:text="@string/mobile_num_show"
+            android:visibility="gone" />
+
+
+        <TextView
+            android:id="@+id/textview_birthday"
+            style="@style/main_text_14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="1991" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/btn_vip"
+        style="@style/item_style_setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/top_margin12">
+
+        <TextView
+            style="@style/main_text_14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/vip_infor" />
+
+        <TextView
+            android:id="@+id/vip_infor"
+            style="@style/main_text_14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/top_margin5"
+            android:layout_toLeftOf="@+id/vip_arrow"
+            android:text="@string/vip_get" />
+
+        <ImageView
+            android:id="@+id/vip_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/arrow" />
+    </RelativeLayout>
+
+    <include layout="@layout/view_line" />
+
+    <RelativeLayout
+        android:id="@+id/rl_qqNum"
+        style="@style/item_style_setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/vip_infor_qq"
+            style="@style/main_text_14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/top_margin5"
+            android:layout_marginRight="@dimen/top_margin5"
+            android:text="@string/vip_get" />
+    </RelativeLayout>
+
+</LinearLayout>

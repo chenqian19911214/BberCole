@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+        x
+
+        <import type="com.bber.company.android.tools.Tools" />
+
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/icon_chat_item"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="2dp">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/user_image"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                fresco:placeholderImage="@mipmap/user_icon"
+                fresco:roundAsCircle="true"
+                fresco:roundingBorderColor="@color/transparent"
+                fresco:roundingBorderWidth="2dp" />
+
+            <ImageView
+                android:id="@+id/vip_level"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/user_image"
+                android:layout_alignRight="@+id/user_image"
+                android:visibility="gone" />
+            <!--<com.bber.company.android.widget.MyZoomImageView-->
+            <!--android:id="@+id/user_image"-->
+            <!--android:layout_width="20dp"-->
+            <!--android:layout_height="20dp"-->
+            <!--android:layout_centerInParent="true"-->
+            <!--android:layout_marginLeft="20dp"-->
+            <!--fresco:actualImageScaleType="fitCenter" />-->
+
+            <TextView
+                android:id="@+id/text_name"
+                style="@style/text_gray15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/user_image"
+                android:text="缘分天空 :"
+                android:textColor="@color/btn_pink_text" />
+
+
+            <TextView
+                android:id="@+id/right_data"
+                style="@style/text_white15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/text_name"
+                android:layout_marginLeft="5dp"
+
+                android:layout_marginRight="15dp"
+                android:layout_toRightOf="@+id/text_name"
+                android:text="我的钱包" />
+
+            <!-- 语音 -->
+            <LinearLayout
+                android:id="@+id/view_voice_source"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="15dp"
+                android:layout_toRightOf="@+id/right_data"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/animationIV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/adapter_voice" />
+
+                <TextView
+                    android:id="@+id/voice_time"
+                    style="@style/main_text_14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/top_margin20"
+                    android:text="0''" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</layout>

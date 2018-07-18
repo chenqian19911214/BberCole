@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.bber.company.android.viewmodel.GameViewModel" />
+
+        <variable
+            name="headerBarViewModel"
+            type="com.bber.company.android.viewmodel.HeaderBarViewModel" />
+
+        <variable
+            name="index"
+            type="Integer" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/icon_winner" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="往期中奖"
+                android:textColor="@color/text_glod"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/pastNum1"
+            style="@style/text_white32"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/icon_game_brown"
+            android:gravity="center"
+            android:paddingBottom="2dp"
+            android:text="3" />
+
+        <TextView
+            android:id="@+id/pastNum2"
+            style="@style/text_white24"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/icon_game_before"
+            android:gravity="center"
+            android:text="1" />
+
+        <TextView
+            android:id="@+id/pastNum3"
+            style="@style/text_white24"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/icon_game_before"
+            android:gravity="center"
+            android:text="5" />
+
+        <TextView
+            android:id="@+id/pastNum4"
+            style="@style/text_white24"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/icon_game_before"
+            android:gravity="center"
+            android:text="8" />
+
+        <TextView
+            android:id="@+id/pastNum5"
+            style="@style/text_white24"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/icon_game_before"
+            android:gravity="center"
+            android:text="6" />
+    </LinearLayout>
+</layout>

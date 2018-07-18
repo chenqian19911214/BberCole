@@ -1,0 +1,54 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page_bg">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_custom_home" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginTop="@dimen/top_margin12"
+        android:scrollbars="vertical" />
+
+    <LinearLayout
+        android:id="@+id/view_no_msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/null_msg" />
+
+        <TextView
+            style="@style/text_gray15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/top_margin20"
+            android:text="@string/no_msg" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/guide_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black90"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/guide_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="136dp"
+            android:background="@drawable/icon_contact_xiaomei" />
+    </LinearLayout>
+</RelativeLayout>

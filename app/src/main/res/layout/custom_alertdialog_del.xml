@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="@dimen/top_margin60"
+    android:layout_marginRight="@dimen/top_margin60"
+    android:background="@drawable/dialog_bg"
+    android:divider="?android:attr/listDivider"
+    android:orientation="vertical"
+    android:showDividers="middle">
+
+    <TextView
+        style="@style/main_text_15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/top_margin8"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:lineSpacingExtra="3dp"
+        android:text="请选择以下操作" />
+
+    <TextView
+        android:id="@+id/dialog_del"
+        style="@style/main_text_15"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog_item"
+        android:lineSpacingExtra="3dp"
+        android:paddingBottom="@dimen/top_margin12"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="@dimen/top_margin12"
+        android:text="删除" />
+
+    <TextView
+        android:id="@+id/dialog_transmit"
+        style="@style/main_text_15"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog_item"
+        android:lineSpacingExtra="3dp"
+        android:paddingBottom="@dimen/top_margin12"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="@dimen/top_margin12"
+        android:text="转发"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/dialog_copy"
+        style="@style/main_text_15"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog_item"
+        android:lineSpacingExtra="3dp"
+        android:paddingBottom="@dimen/top_margin12"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="@dimen/top_margin12"
+        android:text="复制"
+        android:visibility="gone" />
+
+</LinearLayout>

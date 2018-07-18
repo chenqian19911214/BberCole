@@ -1,0 +1,303 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_custom"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/key_top"
+        android:layout_width="match_parent"
+        android:layout_height="210dp"
+        android:layout_above="@+id/center_lin"
+        android:background="@drawable/icon_banner"
+        android:orientation="vertical"></LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_key_invite"
+        style="@style/text_white14"
+        android:layout_width="180dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="@dimen/top_margin12"
+        android:background="@drawable/btn_red_nor"
+        android:gravity="center"
+        android:onClick="onClickCopy"></TextView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/center_lin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="30dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="受邀好友注册时填写您为推荐人并首次充值会员,将获得以下奖励。"
+                android:textColor="@color/btn_unable"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="145dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:text="推荐人获得奖励"
+                android:textColor="#CA2E11"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="145dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/home_introduce_reward"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:text="月度黄金会员" />
+
+                <TextView
+                    android:id="@+id/month_text"
+                    android:layout_width="145dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="-1dp"
+                    android:background="@drawable/home_introduce_reward"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:text="获得5元现金" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-1dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="145dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/home_introduce_reward"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:text="季度黄金会员" />
+
+                <TextView
+                    android:id="@+id/quarter_text"
+                    android:layout_width="145dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="-1dp"
+                    android:background="@drawable/home_introduce_reward"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:text="获得5元现金" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-1dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="145dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/home_introduce_reward"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:text="年度黄金会员" />
+
+                <TextView
+                    android:id="@+id/year_text"
+                    android:layout_width="145dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="-1dp"
+                    android:background="@drawable/home_introduce_reward"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:text="获得5元现金" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-1dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="145dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/home_introduce_reward"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:text="终身黄金会员" />
+
+                <TextView
+                    android:id="@+id/all_text"
+                    android:layout_width="145dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="-1dp"
+                    android:background="@drawable/home_introduce_reward"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:text="获得5元现金" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="受邀好友获得奖励"
+                android:textColor="#CA2E11"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="145dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/home_introduce_reward"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:text="月度黄金会员" />
+
+                <TextView
+                    android:id="@+id/month_activity"
+                    android:layout_width="145dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="-1dp"
+                    android:background="@drawable/home_introduce_reward"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:text="获得5元现金" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-1dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="145dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/home_introduce_reward"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:text="季度黄金会员" />
+
+                <TextView
+                    android:id="@+id/quarter_activity"
+                    android:layout_width="145dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="-1dp"
+                    android:background="@drawable/home_introduce_reward"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:text="获得5元现金" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-1dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="145dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/home_introduce_reward"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:text="年度黄金会员" />
+
+                <TextView
+                    android:id="@+id/year_activity"
+                    android:layout_width="145dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="-1dp"
+                    android:background="@drawable/home_introduce_reward"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:text="获得5元现金" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-1dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="145dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/home_introduce_reward"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:text="终身黄金会员" />
+
+                <TextView
+                    android:id="@+id/all_activity"
+                    android:layout_width="145dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="-1dp"
+                    android:background="@drawable/home_introduce_reward"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:text="获得5元现金" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/botton_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text='             注：1 活动点数 = 1元 \n (现金送入钱包，活动点数送入游戏)'
+                android:textColor="@color/btn_unable"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

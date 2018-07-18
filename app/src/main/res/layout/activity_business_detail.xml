@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page_bg"
+    android:fitsSystemWindows="true">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_custom" />
+
+    <com.bber.company.android.widget.NotifyingScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:background="@color/black">
+
+                <ImageView
+                    android:id="@+id/iv_cover"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@mipmap/default_shop"
+                    android:scaleType="centerCrop" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="@dimen/top_margin8"
+                    android:layout_marginLeft="@dimen/padding_left"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_price"
+                        style="@style/text_pink12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/top_margin5"
+                        android:layout_marginTop="@dimen/top_margin5" />
+
+                    <TextView
+                        android:id="@+id/tv_activity"
+                        style="@style/text_pink12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="@dimen/top_margin5"
+                        android:layout_marginTop="@dimen/top_margin5" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_shop_name"
+                style="@style/item_style_setting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_shop_name"
+                    style="@style/main_text_14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_photo"
+                style="@style/item_style_setting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/top_margin6"
+                android:clickable="false"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/main_text_14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/girl_ablum" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_photo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/top_margin5"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:padding="5dp"
+                    android:scrollbars="none"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_feature"
+                style="@style/item_style_setting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/top_margin6"
+                android:clickable="false"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/main_text_14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/shop_feature" />
+
+                <include layout="@layout/view_line"></include>
+
+                <TextView
+                    android:id="@+id/tv_feature"
+                    style="@style/main_text_14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/top_margin12" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_shop_detail"
+                style="@style/item_style_setting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/top_margin6"
+                android:clickable="false"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/main_text_14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/shop_detail" />
+
+                <include layout="@layout/view_line"></include>
+
+                <TextView
+                    android:id="@+id/tv_shop_detail"
+                    style="@style/main_text_14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/top_margin12" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_manager"
+                style="@style/item_style_setting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/top_margin6"
+                android:clickable="false"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/main_text_14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/manager_contact" />
+
+                <include layout="@layout/view_line"></include>
+
+                <TextView
+                    android:id="@+id/tv_manager_phone"
+                    style="@style/main_text_14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/top_margin12" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_shop_address"
+                style="@style/item_style_setting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/top_margin6"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/main_text_14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/shop_address" />
+
+                <include layout="@layout/view_line"></include>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/top_margin12">
+
+                    <ImageView
+                        android:id="@+id/im_unuse_location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@mipmap/map_default" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|left"
+                        android:layout_marginLeft="@dimen/top_margin12"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_shop_tittle"
+                            style="@style/main_text_14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/tv_shop_address"
+                            style="@style/main_text_12"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/top_margin6" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/item_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/top_margin6"
+                android:clickable="false"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/top_margin12"
+                android:paddingTop="@dimen/top_margin12">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/top_margin6"
+                    android:layout_marginTop="@dimen/top_margin6">
+
+                    <RatingBar
+                        android:id="@+id/rb_rating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="26dp"
+                        android:layout_centerVertical="true"
+                        android:isIndicator="true"
+                        android:numStars="5"
+                        android:progressDrawable="@drawable/rating_gary"
+                        android:rating="0" />
+
+                    <TextView
+                        android:id="@+id/tv_ration_mun"
+                        style="@style/second_text_14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/top_margin6"
+                        android:layout_toRightOf="@+id/rb_rating" />
+
+                    <TextView
+                        android:id="@+id/tv_rating_more"
+                        style="@style/text_pink15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:gravity="center_vertical"
+                        android:text="@string/get_more" />
+                </RelativeLayout>
+
+                <include layout="@layout/view_line"></include>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_rating"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/top_margin5"
+                    android:scrollbars="none"
+                    android:visibility="gone" />
+
+                <View
+                    android:id="@+id/view_rating_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:background="@color/gray_line"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_add_rating"
+                    style="@style/text_pink14"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/top_margin12"
+                    android:gravity="center"
+                    android:padding="@dimen/top_margin5"
+                    android:text="@string/add_rating" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </com.bber.company.android.widget.NotifyingScrollView>
+
+</RelativeLayout>

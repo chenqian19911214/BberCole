@@ -1,0 +1,102 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_custom_bank" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/top_margin12"
+        android:background="@drawable/setting_item_bg"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/main_text_14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/top_margin40"
+            android:text="@string/order_price" />
+
+        <TextView
+            android:id="@+id/my_balance"
+            style="@style/main_text_22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/top_margin40"
+            android:text="0" />
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_coupon"
+        style="@style/item_style_setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/top_margin6">
+
+        <TextView
+            style="@style/main_text_14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/coupon" />
+
+        <TextView
+            android:id="@+id/tv_confirm_vouche"
+            style="@style/text_pink18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" />
+
+        <ImageView
+            android:id="@+id/iv_voucher_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/arrow" />
+    </RelativeLayout>
+
+    <include layout="@layout/view_line" />
+
+
+    <RelativeLayout
+        android:id="@+id/rl_order_price"
+        style="@style/item_style_setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="false">
+
+        <TextView
+            style="@style/main_text_14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/need_price" />
+
+        <TextView
+            android:id="@+id/tv_confirm_price"
+            style="@style/text_pink18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" />
+        />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_confirm_order"
+        style="@style/btn_pink"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/top_margin32"
+        android:text="@string/over" />
+
+</LinearLayout>

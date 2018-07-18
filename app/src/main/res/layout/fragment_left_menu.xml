@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.bber.company.android.viewmodel.UserViewModel" />
+
+        <variable
+            name="index"
+            type="Integer" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/main_theme"
+        android:orientation="vertical">
+
+
+        <!--头布局-->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/ll_myprofile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="50dp"
+                android:orientation="horizontal">
+
+                <!-- fresco:roundingBorderColor="@color/pink"
+                    fresco:roundingBorderWidth="2dp"-->
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/user_icon"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:onClick="userImformation"
+                    fresco:placeholderImage="@mipmap/user_icon"
+                    fresco:roundAsCircle="true"
+                    fresco:roundingBorderColor="@color/pink"
+                    fresco:roundingBorderWidth="2dp" />
+
+                <!--  android:clickable="true"-->
+                <!--头像这一层-->
+                <RelativeLayout
+                    android:id="@+id/user_imformation"
+                    android:layout_width="180dp"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:id="@+id/contextlayoutid"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true">
+
+                        <TextView
+                            android:id="@+id/tv_isVerify"
+                            style="@style/text_white12"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/top_margin12"
+                            android:drawableLeft="@mipmap/mobileverify"
+                            android:drawablePadding="@dimen/drawable_pading"
+                            android:text="@string/mobile_no_verify"
+                            android:textColor="#fff" />
+
+                        <TextView
+                            android:id="@+id/tv_vip_end_time"
+                            style="@style/text_white12"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/top_margin12"
+                            android:background="@mipmap/vipendtime"
+                            android:drawablePadding="@dimen/drawable_pading"
+                            android:gravity="center"
+                            android:text="会员到期时间"
+                            android:textColor="#FE0262" />
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/uer_name"
+                        style="@style/text_white12"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@id/contextlayoutid"
+                        android:layout_marginBottom="@dimen/top_margin10"
+                        android:layout_marginLeft="@dimen/top_margin12"
+                        android:text="usetname" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/contextlayoutid"
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            android:id="@+id/viplodle_id"
+                            style="@style/text_white12"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/top_margin10"
+                            android:drawableLeft="@mipmap/golevip"
+                            android:drawablePadding="@dimen/drawable_pading"
+                            android:text="年度黄金会员"
+                            android:textColor="#FD9700" />
+
+                        <Button
+                            android:id="@+id/vip_renew_button_id"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/top_margin5"
+                            android:background="@mipmap/viprenewba"
+                            android:gravity="center" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <!--会员特权-->
+                <LinearLayout
+                    android:id="@+id/user_vip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/vip_name"
+                        style="@style/text_white12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@mipmap/vip_small_none"
+                        android:drawablePadding="@dimen/top_margin6" />
+
+                    <TextView
+                        android:id="@+id/tv_getvip"
+                        style="@style/text_white11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/top_margin6"
+                        android:text="@string/vip_service" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/guide_0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/icon_left_guide0"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/user_recycle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/top_statusbar"
+                android:background="@color/white"
+                android:scrollbars="none">
+
+            </android.support.v7.widget.RecyclerView>
+
+            <RelativeLayout
+                android:id="@+id/hid_rel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/black80"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/guide_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/icon_left_guide1" />
+
+                <ImageView
+                    android:id="@+id/guide_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
+                    android:background="@drawable/icon_left_guide2" />
+
+                <ImageView
+                    android:id="@+id/guide_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="250dp"
+                    android:background="@drawable/icon_left_guide3" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/top_statusbar"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/black"
+                android:clipToPadding="true"
+                android:fitsSystemWindows="true" />
+        </RelativeLayout>
+
+    </LinearLayout>
+</layout>

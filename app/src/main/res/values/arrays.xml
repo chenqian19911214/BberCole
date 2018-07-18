@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="card">
+        <item>请选择银行</item>
+        <item>中国工商银行</item>
+        <item>招商银行 </item>
+        <item>中国建设银行</item>
+        <item>中国农业银行</item>
+        <item>中国银行</item>
+        <item>交通银行</item>
+        <item>中国民生银行</item>
+        <item>中信银行</item>
+        <item>上海浦东发展银行</item>
+        <item>邮政储蓄</item>
+        <item>中国光大银行</item>
+        <item>平安银行(原深圳发展银行)</item>
+        <item>广发银行股份有限公司</item>
+        <item>华夏银行</item>
+        <item>福建兴业银行</item>
+    </string-array>
+
+    <!-- 跳转 -->
+    <string-array name="array_service_actions">
+        <item>com.bber.company.android.view.activity.Buy_vipActivity</item><!--我的会员-->
+        <item>com.bber.company.android.view.activity.MyVIPActivity</item><!--我的钱包-->
+        <!--  <item>com.bber.company.android.view.activity.BusinessActivity</item>-->
+        <item>com.bber.company.android.view.activity.FavoriteListActivity</item><!--我的收藏-->
+        <item>com.bber.company.android.view.activity.BillListActivity</item><!--预约订单-->
+        <item>com.bber.company.android.view.activity.NewUserActivity</item><!--新手教程-->
+        <!--<item>com.bber.company.android.view.activity.GameActivity</item>-->
+        <item>com.bber.company.android.view.activity.SettingActivity</item><!--设置-->
+        <item>com.bber.company.android.view.activity.CommonProblemActivity</item><!--常见问题-->
+        <item>com.bber.company.android.view.activity.AboutUsActivity</item><!--商务合作-->
+        <item>com.bber.company.android.view.activity.About_Us_Ban_Activity</item><!--关于我们-->
+    </string-array>
+    <string-array name="country_code_list_en" translatable="false">
+        <item>China                      *+86   </item>
+        <item>Philippines                *+63   </item>
+    </string-array>
+    <string-array name="country_code_list_ch" translatable="false">
+        <item>中国               *+86   </item>
+        <item>菲律宾             *+63   </item>
+
+    </string-array>
+
+</resources>

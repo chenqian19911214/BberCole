@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="com.bber.company.android.tools.Tools" />
+
+        <variable
+            name="item"
+            type="com.bber.company.android.bean.DiscussBean" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="205dp"
+        android:clickable="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="205dp">
+
+            <ImageView
+                android:id="@+id/adapter_dynamic_image"
+                android:layout_width="match_parent"
+                android:layout_height="205dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:scaleType="centerCrop"
+                app:defPhoto="@{@drawable/default_shop}"
+                app:imageUrl="@{item.getCoverPicture()}" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/icon_title_back"
+                android:paddingLeft="5dp"
+                android:paddingTop="@dimen/top_margin6"
+                android:text="@{item.getTitle()}"
+                android:textColor="@color/item_bg"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/icon_white"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:drawableLeft="@mipmap/icon_hot"
+                    android:drawablePadding="5dp"
+                    android:gravity="center"
+                    android:text='@{item.getReadTimes()}'
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/data_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="3dp"
+                    android:drawableLeft="@drawable/icon_clock"
+
+                    android:drawablePadding="5dp"
+                    android:gravity="center"
+                    android:text='@{item.getDataStr()}'
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+        <!--<RelativeLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="45dp"-->
+        <!--android:gravity="center"-->
+        <!--android:orientation="horizontal">-->
+
+        <!--<TextView-->
+        <!--style="@style/text_pink15"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="10dp"-->
+        <!--android:gravity="center"-->
+        <!--android:paddingLeft="10dp"-->
+        <!--android:drawableLeft="@mipmap/icon_hot"-->
+        <!--android:text='@{item.getReadTimes()}' />-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/data_text"-->
+        <!--style="@style/text_gray15"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_marginRight="10dp"-->
+        <!--android:gravity="center"-->
+        <!--android:text='@{Tools.timeStamp2Date(item.getStartTime(),"yyyy-MM-dd")}' />-->
+        <!--</RelativeLayout>-->
+
+    </LinearLayout>
+</layout>

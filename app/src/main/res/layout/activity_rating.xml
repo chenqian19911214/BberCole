@@ -1,0 +1,106 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_custom" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btn_over"
+        android:layout_below="@+id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/activity_horizontal_margin">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/activity_horizontal_margin">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/user_icon"
+                    android:layout_width="86dp"
+                    android:layout_height="86dp"
+                    android:layout_centerInParent="true"
+                    fresco:placeholderImage="@mipmap/user_icon"
+                    fresco:roundAsCircle="true"
+                    fresco:roundingBorderWidth="1dp" />
+
+                <TextView
+                    android:id="@+id/name"
+                    style="@style/main_text_14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/top_margin8" />
+
+                <RatingBar
+                    android:id="@+id/rating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="39dp"
+                    android:layout_marginTop="@dimen/top_margin5"
+                    android:numStars="5"
+                    android:progressDrawable="@drawable/rating_big"
+                    android:stepSize="1" />
+            </LinearLayout>
+
+            <TextView
+                style="@style/sub_text_13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/padding_left"
+                android:layout_marginLeft="@dimen/top_margin20"
+                android:layout_marginTop="@dimen/top_margin5"
+                android:text="@string/tag_tip" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:layout_marginLeft="@dimen/top_margin20"
+                android:layout_marginRight="@dimen/top_margin20"
+                android:background="@color/gray_line" />
+
+            <com.bber.customview.FlowTagLayout
+                android:id="@+id/feature_tag"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_marginLeft="@dimen/top_margin20"
+                android:layout_marginRight="@dimen/top_margin20"
+                android:layout_weight="3" />
+
+            <EditText
+                android:id="@+id/et_suggest"
+                style="@style/edit_withe_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/top_margin20"
+                android:gravity="left|top"
+                android:hint="@string/surgest_hint"
+                android:maxLength="120"
+                android:maxLines="6"
+                android:minLines="5" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_over"
+        style="@style/btn_pink"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="@string/rating_voer" />
+
+</RelativeLayout>

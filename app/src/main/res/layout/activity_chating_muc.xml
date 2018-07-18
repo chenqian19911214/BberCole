@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_chating_muc"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page_bg"
+    android:fitsSystemWindows="true">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_custom_chat" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/view_edit"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginBottom="@dimen/top_margin5"
+        android:orientation="vertical">
+
+        <com.bber.company.android.widget.DropdownListView
+            android:id="@+id/chat_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="@color/transparent"
+            android:divider="@null"
+            android:listSelector="@color/transparent"
+            android:transcriptMode="normal" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/btn_right"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white">
+
+        <EditText
+            android:id="@+id/chat_edit"
+            style="@style/main_text_14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/top_margin6"
+            android:layout_marginLeft="@dimen/top_margin12"
+            android:layout_marginRight="@dimen/top_margin12"
+            android:layout_marginTop="@dimen/top_margin6"
+            android:layout_toLeftOf="@+id/btn_send"
+            android:background="@mipmap/chat_edit_bg"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:hint="快来聊聊吧..."
+            android:maxHeight="60dp"
+            android:maxLength="300" />
+
+        <TextView
+            android:id="@+id/btn_send"
+            style="@style/text_pink15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/top_margin20"
+            android:text="发送" />
+    </RelativeLayout>
+</RelativeLayout>

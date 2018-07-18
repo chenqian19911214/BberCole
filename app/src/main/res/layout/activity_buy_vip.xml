@@ -1,0 +1,535 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.bber.company.android.viewmodel.WalletViewModel" />
+
+        <variable
+            name="headerBarViewModel"
+            type="com.bber.company.android.viewmodel.HeaderBarViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+        <!-- 头部 -->
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/layout_locates"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/header_bar"
+                layout="@layout/include_header"
+                app:headerBarViewModel="@{headerBarViewModel}" />
+
+            <!--上面头像部分-->
+            <LinearLayout
+                android:id="@+id/ll_now_status"
+                style="@style/item_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/top_margin6"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/top_margin12"
+                android:paddingTop="@dimen/top_margin12">
+
+                <RelativeLayout
+                    android:id="@+id/ll_myprofile"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp">
+
+                    <!--  fresco:roundingBorderColor="@color/pink"
+                        fresco:roundingBorderWidth="2dp" -->
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/user_icon"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        fresco:placeholderImage="@mipmap/user_icon"
+                        fresco:roundAsCircle="true" />
+
+                    <ImageView
+                        android:id="@+id/user_icon_xiao"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/top_margin6"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_now_level"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="当前会员等级："
+                            android:textColor="@color/textcolor" />
+
+                        <TextView
+                            android:id="@+id/level_onclick"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="查看会员特权"
+                            android:textColor="@color/blue_img"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_vip_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="有效期为："
+                        android:textColor="@color/textcolor" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linviplistid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <!--购买会员-->
+                <LinearLayout
+                    android:id="@+id/vip_recharge"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dip"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            style="@style/text_gray14"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="20dp"
+                            android:gravity="center_vertical"
+                            android:text="购买会员"
+                            android:textColor="@color/textcolor" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/vip_linearlayout1"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:clickable="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="20dp"
+                            android:background="@mipmap/glod_vip" />
+
+                        <TextView
+                            style="@style/main_text_14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:text="月度"
+                            android:textColor="@color/pink" />
+
+                        <TextView
+                            style="@style/main_text_14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:text="黄金会员" />
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:id="@+id/glod_vip1"
+                                style="@style/text_white13"
+                                android:layout_width="@dimen/map_vip_height"
+                                android:layout_height="24dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginRight="25dp"
+                                android:background="@drawable/btn_pink_stoke"
+                                android:gravity="center"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp"
+                                android:text="¥48"
+                                android:textColor="@color/pink" />
+                        </RelativeLayout>
+
+                        <TextView
+                            style="@style/text_gray14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:text="基础会员" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/vip_linearlayout6"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:clickable="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="20dp"
+                            android:background="@mipmap/glod_vip" />
+
+                        <TextView
+                            style="@style/main_text_14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:text="半年"
+                            android:textColor="@color/pink" />
+
+                        <TextView
+                            android:id="@+id/textView6"
+                            style="@style/main_text_14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:text="黄金会员" />
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:id="@+id/glod_vip6"
+                                style="@style/text_white13"
+                                android:layout_width="@dimen/map_vip_height"
+                                android:layout_height="24dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="25dp"
+                                android:layout_marginRight="25dp"
+                                android:background="@drawable/btn_pink_stoke"
+                                android:gravity="center"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp"
+                                android:text="¥188"
+                                android:textColor="@color/pink" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/vip_linearlayout12"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:clickable="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="20dp"
+                            android:background="@mipmap/glod_vip" />
+
+                        <TextView
+                            style="@style/main_text_14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:text="年度"
+
+                            android:textColor="@color/pink" />
+
+                        <TextView
+                            android:id="@+id/textView7"
+                            style="@style/main_text_14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:text="黄金会员" />
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:id="@+id/glod_vip12"
+                                style="@style/text_white13"
+                                android:layout_width="@dimen/map_vip_height"
+                                android:layout_height="24dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="25dp"
+                                android:layout_marginRight="25dp"
+                                android:background="@drawable/btn_pink_stoke"
+                                android:gravity="center"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp"
+                                android:text="¥288"
+                                android:textColor="@color/pink" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/glod_vip_linearlayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:clickable="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="20dp"
+                            android:background="@mipmap/forever_glod" />
+
+                        <TextView
+                            style="@style/main_text_14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:text="终身"
+                            android:textColor="@color/pink" />
+
+                        <TextView
+                            style="@style/main_text_14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:text="黄金会员" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:id="@+id/glod_vip_all"
+                                style="@style/text_white13"
+                                android:layout_width="@dimen/map_vip_height"
+                                android:layout_height="24dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="24dp"
+                                android:layout_marginRight="24dp"
+                                android:background="@drawable/btn_pink_stoke"
+                                android:gravity="center"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp"
+                                android:text="¥688"
+                                android:textColor="@color/pink" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@mipmap/viptopback">
+
+                        <TextView
+                            style="@style/text_gray14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="20dp"
+                            android:gravity="center_vertical"
+                            android:text="会员特权"
+                            android:textColor="#754214" />
+
+
+                        <TextView
+                            android:id="@+id/seemoreid"
+                            style="@style/text_gray14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="@dimen/top_margin10"
+                            android:gravity="center_vertical"
+                            android:text="@string/seemore"
+                            android:textColor="#754214" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/wallert_recharge"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="1dp"
+                        android:background="@color/white"
+                        android:clickable="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="20dp"
+                            android:background="@mipmap/icon_wallert" />
+
+                        <TextView
+                            style="@style/main_text_14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:text="钱包充值" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:id="@+id/charge_wallert"
+                                style="@style/text_white13"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginRight="25dp"
+                                android:gravity="center"
+                                android:textColor="@color/pink" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--会员特权-->
+                <LinearLayout
+                    android:id="@+id/vip_payfor"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dip"
+                    android:orientation="vertical">
+                    <!-- android:paddingVertical="@dimen/top_margin20"-->
+                    <com.ledlau.widgets.HorizontalPageGridView
+                        android:id="@+id/vip_privilege_gridView_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#fff" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <!--第一次进入教程页面-->
+        <LinearLayout
+            android:id="@+id/guide_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black90"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/icon_guide1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="120dp"
+                android:background="@drawable/icon_guide1_"
+                android:visibility="gone" />
+            <!--
+                        <ImageView
+                            android:id="@+id/icon_guide2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="90dp"
+                            android:background="@drawable/icon_buy_guide2"
+                            android:visibility="gone" />-->
+
+
+        </LinearLayout>
+
+        <!--下面的button 按钮-->
+        <LinearLayout
+            android:id="@+id/layout_locates"
+            android:layout_width="match_parent"
+            android:layout_height="50dip"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/pay_money_text_id"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#EEEEEE"
+                android:gravity="left|center"
+                android:paddingLeft="@dimen/vertical_line_height"
+                android:textColor="#666666"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/btn_sure"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:background="@drawable/vip_buy_button_pink"
+                android:gravity="center"
+                android:text="@string/pay_tip"
+                android:textColor="@color/btn_pink_text"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/icon_guide3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:background="@drawable/icon_buy_guide3"
+            android:visibility="gone" />
+
+
+    </RelativeLayout>
+</layout>

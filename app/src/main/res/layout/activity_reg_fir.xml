@@ -1,0 +1,50 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+    <LinearLayout
+        style="@style/item_style"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="@dimen/top_margin12"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/main_text_14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/key_tip"></TextView>
+
+        <EditText
+            android:id="@+id/edit_key"
+            style="@style/normal_edit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:digits="@string/psd_style"
+            android:gravity="center_vertical"
+            android:hint="@string/key_hint"
+            android:inputType="text"
+            android:maxLength="6" />
+    </LinearLayout>
+
+    <include layout="@layout/view_line_edit" />
+
+    <Button
+        android:id="@+id/btn_next"
+        style="@style/btn_pink"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/top_margin32"
+        android:enabled="false"
+        android:text="@string/skip" />
+
+</LinearLayout>

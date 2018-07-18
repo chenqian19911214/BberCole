@@ -1,0 +1,231 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_custom" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/view_change_psd"
+                style="@style/item_style_setting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/top_margin12">
+
+                <TextView
+                    style="@style/main_text_14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/change_psd" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/arrow" />
+            </RelativeLayout>
+
+            <include layout="@layout/view_line" />
+
+            <RelativeLayout
+                android:id="@+id/view_new_version"
+                style="@style/item_style_setting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    style="@style/main_text_14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/new_version" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/arrow" />
+            </RelativeLayout>
+
+            <include layout="@layout/view_line" />
+
+            <RelativeLayout
+                android:id="@+id/view_clean_cache"
+                style="@style/item_style_setting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    style="@style/main_text_14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/clean_cache" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/arrow" />
+            </RelativeLayout>
+
+            <include layout="@layout/view_line" />
+
+
+            <RelativeLayout
+                style="@style/item_style_setting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false">
+
+                <TextView
+                    style="@style/main_text_14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/gesture_tip" />
+
+                <android.support.v7.widget.SwitchCompat
+                    android:id="@+id/gesture_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:checked="true"
+                    android:theme="@style/SwitchStyle" />
+            </RelativeLayout>
+
+
+            <TextView
+                style="@style/main_text_15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/top_margin20"
+                android:layout_marginLeft="@dimen/top_margin20"
+                android:layout_marginTop="@dimen/top_margin20"
+                android:autoSizeTextType="uniform"
+                android:text="@string/msg_tip" />
+
+            <RelativeLayout
+                style="@style/item_style_setting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false">
+
+                <TextView
+                    style="@style/main_text_14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/new_msg_tip" />
+
+                <android.support.v7.widget.SwitchCompat
+                    android:id="@+id/msg_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:checked="true"
+                    android:theme="@style/SwitchStyle" />
+            </RelativeLayout>
+
+            <TextView
+                style="@style/main_text_15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/top_margin20"
+                android:layout_marginLeft="@dimen/top_margin20"
+                android:layout_marginTop="@dimen/top_margin20"
+                android:autoSizeTextType="uniform"
+                android:text="@string/ring_tip" />
+
+            <RelativeLayout
+                style="@style/item_style_setting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false">
+
+                <TextView
+                    style="@style/main_text_14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/ring" />
+
+                <android.support.v7.widget.SwitchCompat
+                    android:id="@+id/ring_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:checked="true"
+                    android:theme="@style/SwitchStyle" />
+            </RelativeLayout>
+
+            <include layout="@layout/view_line" />
+
+            <RelativeLayout
+                style="@style/item_style_setting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false">
+
+                <TextView
+                    style="@style/main_text_14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/vibrate" />
+
+                <android.support.v7.widget.SwitchCompat
+                    android:id="@+id/vibrate_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:checked="true"
+                    android:theme="@style/SwitchStyle" />
+
+
+            </RelativeLayout>
+
+            <include layout="@layout/view_line" />
+
+
+            <RelativeLayout
+                android:id="@+id/btn_logout"
+                style="@style/item_style_setting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/top_margin27">
+
+                <TextView
+                    style="@style/main_text_14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:text="@string/logout_tip" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

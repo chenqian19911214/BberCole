@@ -1,0 +1,76 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/item_bg"
+    android:clickable="true">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/sd_cover"
+        android:layout_width="match_parent"
+        android:layout_height="205dp"
+        android:visibility="gone"
+        fresco:placeholderImage="@mipmap/default_shop"
+        fresco:roundingBorderWidth="2dp" />
+
+    <TextView
+        android:id="@+id/tv_tittle"
+        style="@style/text_white15"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@mipmap/liaotu"
+        android:paddingLeft="@dimen/top_margin20"
+        android:paddingTop="@dimen/top_margin6"
+        android:text="性感尤物，不做标题党" />
+
+    <TextView
+        android:id="@+id/tv_picsum"
+        style="@style/text_white12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rl_infor"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/top_margin20"
+        android:background="@drawable/btn_gray"
+        android:padding="@dimen/top_margin6"
+        android:text="5图" />
+
+    <RelativeLayout
+        android:id="@+id/rl_infor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sd_cover"
+        android:background="@drawable/btn_white_bg"
+        android:paddingBottom="@dimen/top_margin6"
+        android:paddingLeft="@dimen/top_margin20"
+        android:paddingRight="@dimen/top_margin20"
+        android:paddingTop="@dimen/top_margin6">
+        <!--
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/user_icon"
+                    android:visibility="gone"
+                    android:layout_width="37dp"
+                    android:layout_height="37dp"
+                    fresco:placeholderImage="@mipmap/ic_tittle"
+                    fresco:roundingBorderWidth="2dp"/>
+
+                <TextView
+                    android:id="@+id/user_name"
+                    android:layout_centerVertical="true"
+                    style="@style/main_text_14"
+                    android:layout_toRightOf="@+id/user_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+        -->
+        <TextView
+            android:id="@+id/tv_date"
+            style="@style/second_text_14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

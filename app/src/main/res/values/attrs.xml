@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CircleImageView">
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="StepsViewIndicator">
+        <attr name="numOfSteps" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="ProgressWheel">
+        <attr name="matProg_progressIndeterminate" format="boolean" />
+        <attr name="matProg_barColor" format="color" />
+        <attr name="matProg_rimColor" format="color" />
+        <attr name="matProg_rimWidth" format="dimension" />
+        <attr name="matProg_spinSpeed" format="float" />
+        <attr name="matProg_barSpinCycleTime" format="integer" />
+        <attr name="matProg_circleRadius" format="dimension" />
+        <attr name="matProg_fillRadius" format="boolean" />
+        <attr name="matProg_barWidth" format="dimension" />
+        <attr name="matProg_linearProgress" format="boolean" />
+    </declare-styleable>
+
+    <attr name="cropImageStyle" format="reference" />
+    <declare-styleable name="CropImageView">
+        <attr name="highlightColor" format="reference|color" />
+        <attr name="showThirds" format="boolean" />
+        <attr name="showHandles">
+            <enum name="changing" value="0" />
+            <enum name="always" value="1" />
+            <enum name="never" value="2" />
+        </attr>
+    </declare-styleable>
+
+    <!--跑马灯效果-->
+    <declare-styleable name="MarqueeView">
+        <attr name="marqueeInterval" format="integer" />
+        <attr name="marqueeAnimDuration" format="integer" />
+        <attr name="marqueeAnimIn" format="reference" />
+        <attr name="marqueeAnimOut" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="PagerSlidingTabStrip">
+        <attr name="slidingBlock" format="reference|color" />
+        <attr name="allowWidthFull" format="boolean" />
+        <attr name="disableViewPager" format="boolean" />
+        <attr name="disableTensileSlidingBlock" format="boolean" />
+        <attr name="bottomLineColor" format="color" />
+        <attr name="bottomLineHeight" format="dimension" />
+    </declare-styleable>
+
+    <attr name="tab_icon" format="reference" />
+    <attr name="target_icon" format="reference" />
+    <attr name="tab_color" format="color" />
+    <attr name="tab_text" format="string" />
+    <attr name="tab_text_size" format="dimension" />
+
+    <declare-styleable name="ChangeColorIconView">
+        <attr name="tab_icon" />
+        <attr name="target_icon" />
+        <attr name="tab_color" />
+        <attr name="tab_text" />
+        <attr name="tab_text_size" />
+    </declare-styleable>
+
+    <declare-styleable name="TimeView">
+        <attr name="time" format="integer" />
+    </declare-styleable>
+</resources>

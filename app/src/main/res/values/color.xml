@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="control_color">#88000000</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="black30">#4c000000</color>
+    <color name="black60">#99000000</color>
+    <color name="black80">#CC000000</color>
+    <color name="black50">#80000000</color>
+    <color name="black90">#E6000000</color>
+    <color name="black20">#2C000000</color>
+    <color name="red60">#66ff0066</color>
+    <color name="main_theme">#333333</color>
+    <color name="page_bg">#eeeeee</color>
+    <color name="main_text">#333333</color>
+    <color name="second_text">#666666</color>
+    <color name="sub_text">#999999</color>
+    <color name="gray_line">#cccccc</color>
+    <color name="edite_hint">#cccccc</color>
+    <color name="key_page">#666666</color>
+    <color name="edit_bg">#ffffff</color>
+    <color name="title">#ffffff</color>
+    <color name="mian_pre">#111111</color>
+    <color name="item_bg_pre">#cccccc</color>
+    <color name="black_pre">#16141f</color>
+    <color name="light_gray">#999999</color>
+    <color name="pink">#ff0066</color>
+    <color name="pink60">#99ff0066</color>
+    <color name="pink_pre">#CE0D67</color>
+    <color name="setting_item">#ffffff</color>
+    <color name="setting_item_pre">#cccccc</color>
+    <color name="orange">#ffcc00</color>
+    <color name="vip_tittle">#ff6600</color>
+
+    <color name="vip_golden">#ff9900</color>
+    <color name="vip_normal">#ff3366</color>
+    <color name="vip_none">#999999</color>
+    <color name="vip_demon">#33ccff</color>
+    <color name="vip_crown">#ff33ee</color>
+    <color name="green">#00ff33</color>
+    <color name="blue_img">#00ccff</color>
+    <color name="liveboadcast_texton">#666666</color>
+    <color name="liveboadcast_textok">#ff0066</color>
+
+
+    <color name="gray">#4D4D4D</color>
+    <color name="chat_date">#a4a4a4</color>
+    <color name="item_bg">#ffffff</color>
+    <color name="tab_text_normal">#CCCCCC</color>
+    <color name="gray_text">#838383</color>
+    <color name="transparent">#00000000</color>
+    <color name="gray_black">#3b3b3b</color>
+    <color name="line_gray">#D6D6D6</color>
+    <color name="red">#FF0000</color>
+    <color name="red_tip">#de6354</color>
+    <color name="item_click">#d4d4d4</color>
+    <color name="item_click_light">#F5F5F5</color>
+    <color name="grid_item_click">#3f000000</color>
+    <!-- 3表示25%透明度,7表示50%  f表示透明   000000表示颜色-->
+
+    <!-- 改版颜色 -->
+    <color name="item_bg_pre2">#22212C</color>
+
+    <color name="btn_unable">#666666</color>
+    <color name="text_username">#999999</color>
+    <color name="code_text">#75737b</color>
+    <color name="circle_alph">#4cffffff</color>
+    <color name="chat_bottom_bg">#16141f</color>
+    <color name="msg_date">#555460</color>
+    <color name="setting_item_pre2">#0D0D12</color>
+    <color name="setting_text">#f4f4f5</color>
+    <color name="head_bg">#9fffffff</color>
+    <color name="white50">#70ffffff</color>
+    <color name="bg_floder_press">#bdbdbd</color>
+    <color name="bg_yelllow">#fbefe6</color>
+    <color name="bg_bg_yelllow_text">#FF9565</color>
+    <color name="text_purple">#fe00e9</color>
+    <color name="text_glod">#f5d03b</color>
+    <color name="text_brown_gold">#ff970d</color>
+    <color name="text_brown">#fba515</color>
+    <color name="text_yellow">#F2C200</color>
+    <color name="text_name">#f0d840</color>
+    <color name="text_purper">#a186ff</color>
+    <color name="text_mar">#FE00E9</color>
+    <color name="half_color">#30000000</color>
+    <color name="chat_color">#A0ADC1</color>
+    <color name="more_color">#E4507E</color>
+    <color name="back_color">#D5D5D5</color>
+
+    <color name="btn_rect_alpha">#56b3b3b3</color>
+
+    <color name="abot_us_maintext_color">#FF0066</color>
+    <color name="textcolor">#666666</color>
+    <color name="commonpronlemack">#FFDEDDE1</color>
+    <color name="Chartreuse_qian">#FF0066</color>
+    <color name="Beigered">#00F5F5DC</color>
+    <color name="paybackcolor">#ffffff</color>
+
+</resources>

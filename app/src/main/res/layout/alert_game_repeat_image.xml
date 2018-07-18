@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="290dp"
+        android:layout_height="360dp">
+
+        <LinearLayout
+            android:layout_width="290dp"
+            android:layout_height="300dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/icon_userinfo"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/number_buyer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:gravity="center_horizontal"
+                android:text="@string/game_buyuser"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:orientation="horizontal"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp">
+
+                <TextView
+                    android:id="@+id/username"
+                    style="@style/text_gray15"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:text="abcde" />
+
+                <TextView
+                    android:id="@+id/ubmoney"
+                    style="@style/text_gray15"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="¥10000" />
+
+                <TextView
+                    android:id="@+id/location_text"
+                    style="@style/text_gray15"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:maxLines="1"
+                    android:text="黑龙江" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/dismiss_lin"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="63dp"
+                android:background="@drawable/icon_background_orange"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/icon_unhappy" />
+
+                <TextView
+                    style="@style/text_white15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="没抢到好气啊" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/user_head"
+            android:layout_width="102dp"
+            android:layout_height="102dp"
+            android:layout_centerHorizontal="true"
+            fresco:placeholderImage="@drawable/user_headimage"
+            fresco:roundAsCircle="true"
+            fresco:roundingBorderColor="@color/text_brown"
+            fresco:roundingBorderWidth="1dp" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

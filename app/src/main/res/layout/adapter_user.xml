@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="com.bber.company.android.tools.Tools" />
+
+        <variable
+            name="item"
+            type="com.bber.company.android.bean.DiscussBean" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:clickable="true">
+
+        <ImageView
+            android:id="@+id/icon_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:src="@mipmap/icon_buy_vip" />
+
+        <TextView
+            android:id="@+id/text_title"
+            style="@style/text_gray15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+
+            android:layout_toRightOf="@+id/icon_image"
+            android:text="我的钱包" />
+
+        <ImageView
+            android:id="@+id/imagenetid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:src="@mipmap/net" />
+
+        <TextView
+            android:id="@+id/right_data"
+            style="@style/text_pink15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:layout_toLeftOf="@id/imagenetid"
+            android:text="0.00"
+            android:visibility="gone" />
+    </RelativeLayout>
+</layout>

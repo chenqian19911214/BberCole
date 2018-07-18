@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="20dp"
+    android:paddingRight="@dimen/top_margin20"
+    tools:ignore="RtlHardcoded">
+
+    <TextView
+        style="@style/second_text_14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/top_margin8"
+        android:paddingLeft="@dimen/top_margin8"
+        android:paddingTop="@dimen/top_margin8"
+        android:text="@string/hot_city" />
+
+    <com.bber.company.android.widget.MyGridView
+        android:id="@+id/gridview_hot_city"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:cacheColorHint="@android:color/transparent"
+        android:horizontalSpacing="12dp"
+        android:listSelector="@android:color/transparent"
+        android:numColumns="3"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:scrollbars="none"
+        android:verticalSpacing="12dp" />
+</LinearLayout>

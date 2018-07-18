@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="headerBarViewModel"
+            type="com.bber.company.android.viewmodel.HeaderBarViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="?attr/colorPrimary"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="horizontal"
+        android:visibility="@{headerBarViewModel.isShowAll==true? View.VISIBLE : View.GONE}"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:theme="@style/ThemeOverlay.AppCompat.Light">
+
+        <!-- 左边的图标部分-->
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="4dp"
+            android:layout_weight="2"
+            android:gravity="center_vertical"
+            android:onClick="@{headerBarViewModel.clickListener.leftClickListener}"
+            android:visibility="@{headerBarViewModel.isShowLeft==true? View.VISIBLE : View.INVISIBLE}">
+
+            <ImageView
+                android:id="@+id/include_header_lefticon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="17dp"
+                android:src="@{headerBarViewModel.leftImage}" />
+
+            <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center_vertical"-->
+            <!--android:layout_marginLeft="5dp"-->
+            <!--android:layout_toRightOf="@+id/include_header_lefticon"-->
+            <!--android:singleLine="true"-->
+            <!--android:text="@{headerBarViewModel.leftText}" />-->
+        </RelativeLayout>
+
+        <!-- 中间的文字部分-->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_weight="5"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:onClick="@{headerBarViewModel.titleclickListener.titleListener}"
+            android:singleLine="true"
+            android:text="@{headerBarViewModel.barTitle}"
+            android:textColor="@color/white"
+            android:textSize="18dp" />
+
+        <!-- 右边的日历部分-->
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center"
+            android:layout_weight="2"
+            android:clickable="true"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/icon_imageview"
+                android:layout_width="65dp"
+                android:layout_height="45dp"
+                android:layout_alignParentRight="true"
+                android:onClick="@{headerBarViewModel.clickListener.rightClickListener}"
+                android:paddingRight="10dp"
+                android:src="@{headerBarViewModel.rightImage}" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="@{headerBarViewModel.clickListener.rightClickListener}"
+                android:paddingRight="10dp"
+                android:text="@{headerBarViewModel.rightText}" />
+        </RelativeLayout>
+    </LinearLayout>
+</layout>
